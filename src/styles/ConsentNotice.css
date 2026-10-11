@@ -1,0 +1,106 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.ConsentNotice__notice {
+  width: 100%;
+}
+.ConsentNotice__copy {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  text-wrap: pretty;
+  max-width: 52ch;
+  margin: 0;
+  line-height: 20px;
+}
+.ConsentNotice__link {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+  transition: color 0.1s var(--ease-out-quart);
+}
+.ConsentNotice__link:hover,
+.ConsentNotice__link:focus-visible {
+  color: var(--color-cloud-dark);
+}
+.ConsentNotice__details {
+  padding: var(--sp-8) 0;
+  border-top: 1px solid var(--color-slate-250);
+  border-bottom: 1px solid var(--color-slate-250);
+}
+.ConsentNotice__summary {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-4);
+  cursor: pointer;
+  width: 100%;
+  color: var(--foreground-primary);
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+  display: flex;
+}
+.ConsentNotice__summaryLabel {
+  text-decoration: none;
+}
+.ConsentNotice__chevron {
+  flex: none;
+  transition: transform 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.ConsentNotice__reveal {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+  display: grid;
+}
+.ConsentNotice__revealInner {
+  visibility: hidden;
+  min-height: 0;
+  padding-top: 0;
+  transition:
+    padding-top 0.2s cubic-bezier(0.32, 0.72, 0, 1),
+    visibility 0s 0.2s;
+  overflow: clip;
+}
+.ConsentNotice__details[data-open="true"] .ConsentNotice__chevron {
+  transform: rotate(180deg);
+}
+.ConsentNotice__details[data-open="true"] .ConsentNotice__reveal {
+  grid-template-rows: 1fr;
+}
+.ConsentNotice__details[data-open="true"] .ConsentNotice__revealInner {
+  padding-top: var(--sp-4);
+  visibility: visible;
+  transition: padding-top 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.ConsentNotice__ack {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  gap: var(--sp-12);
+  margin-top: var(--sp-12);
+  color: var(--econ-ink, #141413);
+  cursor: pointer;
+  align-items: flex-start;
+  line-height: 20px;
+  display: flex;
+}
+.ConsentNotice__ack input {
+  flex: none;
+  margin: 0;
+}
+

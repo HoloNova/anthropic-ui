@@ -1,0 +1,38 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.GrowthBars__chart {
+  width: 100%;
+}
+.GrowthBars__value {
+  fill: var(--foreground-primary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.GrowthBars__year {
+  fill: var(--color-slate-500);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  font-variant-numeric: tabular-nums;
+}
+.GrowthBars__baseLabel {
+  fill: var(--ink-no-ai, #9c9a92);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+}
+

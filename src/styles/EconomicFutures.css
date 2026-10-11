@@ -1,0 +1,86 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.EconomicFutures__page {
+  --ink-exposed: #c98500;
+  --ink-other: #6a9bcc;
+  --ink-displaced: #b0403a;
+  --ink-you: var(--foreground-primary);
+  --ink-all: #73726c;
+  --ink-no-ai: #9c9a92;
+  --ink-labour: #217d5d;
+  --ink-capital: #87867f;
+  --ink-moved: #1a1918;
+}
+@media (max-width: 700px) {
+  .EconomicFutures__page {
+    --body-2: 15px;
+  }
+}
+.EconomicFutures__page {
+  --page-margins: clamp(32px, calc(8vw - 24px), 64px);
+  --stage-h-safe: calc(var(--stage-h, 100vh) - var(--header-nav-height, 0px));
+  --type-36: clamp(28px, 3.5vw, 36px);
+  --type-28: clamp(22px, 2.6vw, 28px);
+  --type-22: clamp(20px, 2vw, 22px);
+  --type-13: 13px;
+  --type-11: 11px;
+  overflow-x: clip;
+}
+.EconomicFutures__page .EconomicFutures__deferrable {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+.EconomicFutures__page {
+  overflow-anchor: none;
+  background: var(--background-primary);
+  --c-slow: #6a9bcc;
+  --c-central: #788c5d;
+  --c-fast: #c46686;
+  --c-slow-tint: #c4d9ea;
+  --c-central-tint: #b3c1a0;
+  --c-fast-tint: #e2b6c4;
+  --emp-exposed: #c98500;
+  --emp-other: #6a9bcc;
+  --emp-exposed-tint: #ebd6ab;
+  --emp-other-tint: #c4d9ea;
+  --emp-you: #141413;
+  --sq-auto: #6a9bcc;
+  --sq-aug: #918bd6;
+  --sq-new: #f0ac54;
+  --sq-new-ghost: color-mix(in srgb, var(--sq-new) 26%, #faf9f5);
+  --sq-empty-b: #bdbaae;
+}
+@media (max-width: 700px) {
+  .EconomicFutures__page svg g[filter="url(#mk-marker)"] {
+    filter: url(#mk-marker-lite);
+  }
+  .EconomicFutures__page svg g[filter="url(#mk-dry)"] {
+    filter: url(#mk-dry-lite);
+  }
+  .EconomicFutures__page svg g[filter="url(#mk-rule)"] {
+    filter: none;
+    opacity: 0.68;
+  }
+}
+.EconomicFutures__page .EconomicFutures__endnote-head {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-22, 22px);
+  font-weight: var(--weight-text-regular);
+  letter-spacing: 0;
+  line-height: 1.45455;
+}
+@media (max-width: 700px) {
+  .EconomicFutures__page .EconomicFutures__endnote-head {
+    line-height: 1.5;
+  }
+}
+.EconomicFutures__page .EconomicFutures__endnote-head {
+  text-wrap: balance;
+}
+.EconomicFutures__page .EconomicFutures__endnote-head-lead {
+  color: var(--color-slate-500);
+}
+

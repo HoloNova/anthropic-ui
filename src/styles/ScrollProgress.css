@@ -1,0 +1,22 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.ScrollProgress__wrapper {
+  position: relative;
+}
+.ScrollProgress__track {
+  z-index: 30;
+  background: var(--color-slate-100);
+  pointer-events: none;
+  height: 8px;
+  transition: opacity 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+.ScrollProgress__fill {
+  background: var(--color-slate-300);
+  transform-origin: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+}
+

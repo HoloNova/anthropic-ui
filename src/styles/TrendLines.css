@@ -1,0 +1,224 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.TrendLines__grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  min-width: 0;
+  display: grid;
+}
+@media (min-width: 992px) {
+  .TrendLines__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.TrendLines__chart {
+  min-width: 0;
+  padding: var(--sp-16);
+  border: 1px solid var(--color-slate-250);
+  background: var(--color-slate-100);
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  container-type: inline-size;
+}
+.TrendLines__chartFoot {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+}
+@container (min-width:640px) {
+  .TrendLines__chartFoot {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px 48px;
+  }
+}
+.TrendLines__drawn {
+  background: 0 0;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+}
+.TrendLines__frame {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+.TrendLines__chartTitle {
+  width: fit-content;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0 0 4px;
+}
+@media (max-width: 700px) {
+  .TrendLines__chartTitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.TrendLines__chartTitle p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.TrendLines__chartTitle {
+  color: var(--foreground-primary);
+  text-wrap: balance;
+}
+.TrendLines__chartTitle:first-letter {
+  text-transform: uppercase;
+}
+.TrendLines__svg {
+  display: block;
+  overflow: visible;
+}
+.TrendLines__notes {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+.TrendLines__note {
+  max-width: 70ch;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: 0;
+  line-height: 1.45;
+}
+.TrendLines__tick,
+.TrendLines__year {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  fill: var(--color-slate-500);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.TrendLines__end {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.TrendLines__readout {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+@media (hover: none), (pointer: coarse) {
+  .TrendLines__readout {
+    display: none;
+  }
+}
+.TrendLines__readoutRule {
+  top: var(--sp-16);
+  bottom: var(--sp-16);
+  background: var(--foreground-primary);
+  opacity: 0.28;
+  width: 1px;
+  position: absolute;
+}
+.TrendLines__readoutPanel {
+  top: var(--sp-16);
+  border: 1px solid var(--color-slate-250);
+  background: var(--color-slate-100);
+  white-space: nowrap;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  animation: 90ms ease-out TrendLines__readout-in;
+  display: flex;
+  position: absolute;
+  box-shadow: 0 1px 6px #00000014;
+}
+@media (max-width: 700px) {
+  .TrendLines__readoutPanel {
+    padding: 4px 8px;
+  }
+}
+@keyframes TrendLines__readout-in {
+  0% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .TrendLines__readoutPanel {
+    animation: none;
+  }
+}
+.TrendLines__readoutYear {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--foreground-primary);
+  opacity: 0.55;
+  line-height: 16px;
+}
+.TrendLines__readoutRow {
+  align-items: center;
+  gap: 6px;
+  display: flex;
+}
+.TrendLines__readoutSwatch {
+  border-radius: 50%;
+  flex: none;
+  width: 7px;
+  height: 7px;
+}
+.TrendLines__readoutLabel {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--foreground-primary);
+  opacity: 0.7;
+  line-height: 16px;
+}
+.TrendLines__readoutValue {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  padding-left: var(--sp-12);
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+  line-height: 16px;
+}
+

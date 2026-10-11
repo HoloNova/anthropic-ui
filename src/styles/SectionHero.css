@@ -1,0 +1,255 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionHero__hero {
+  z-index: 2;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+.SectionHero__stage {
+  height: calc(100vh - var(--header-nav-height));
+  flex-direction: column;
+  flex: none;
+  display: flex;
+  position: relative;
+}
+.SectionHero__graphic {
+  flex: auto;
+  min-height: 0;
+  position: relative;
+}
+.SectionHero__content {
+  z-index: 1;
+  padding: var(--sp-24) max(var(--sp-24), (100% - 640px)/2) var(--sp-32);
+  align-items: flex-start;
+  gap: var(--sp-16);
+  text-align: left;
+  pointer-events: none;
+  flex-direction: column;
+  flex: none;
+  order: -1;
+  display: flex;
+  position: relative;
+}
+.SectionHero__content a,
+.SectionHero__content button {
+  pointer-events: auto;
+}
+@media (min-width: 768px) {
+  .SectionHero__stage {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .SectionHero__graphic {
+    flex: none;
+    position: absolute;
+    inset: 0;
+  }
+  .SectionHero__content {
+    width: clamp(380px, 29%, 418px);
+    padding: 0 var(--sp-24);
+    order: 0;
+  }
+}
+.SectionHero__copy {
+  flex-direction: column;
+  display: flex;
+}
+@keyframes SectionHero__hero-lockup-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.SectionHero__copy > *,
+.SectionHero__actions {
+  animation: 0.8s cubic-bezier(0.33, 1, 0.68, 1) 0.4s both
+    SectionHero__hero-lockup-in;
+}
+.SectionHero__copy > :nth-child(2) {
+  animation-delay: 0.5s;
+}
+.SectionHero__copy > :nth-child(3) {
+  animation-delay: 0.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionHero__copy > *,
+  .SectionHero__actions {
+    animation: none;
+  }
+}
+.SectionHero__standfirst {
+  color: var(--foreground-secondary);
+  text-wrap: auto;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .SectionHero__standfirst {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionHero__standfirst p {
+  font-size: inherit;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .SectionHero__standfirst {
+    text-wrap: pretty;
+    max-width: 308px;
+  }
+}
+.SectionHero__standfirst + .SectionHero__standfirst {
+  margin-top: var(--sp-24);
+}
+.SectionHero__headline {
+  margin: 0 0 var(--sp-24);
+  color: var(--foreground-primary);
+  text-wrap: balance;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-28, 28px);
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 1.28571;
+}
+@media (max-width: 767px) {
+  .SectionHero__headline {
+    text-align: center;
+    align-self: stretch;
+  }
+}
+.SectionHero__headline {
+  font-variation-settings: "opsz" 28;
+}
+.SectionHero__actions {
+  flex-wrap: wrap;
+  gap: 8px;
+  animation-delay: 0.7s;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .SectionHero__actions {
+    justify-content: center;
+    align-self: stretch;
+  }
+}
+@media (max-width: 700px) {
+  .SectionHero__actions .SectionHero__btn {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+}
+.SectionHero__btn {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--br-6);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  white-space: nowrap;
+  cursor: pointer;
+  appearance: none;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  display: inline-flex;
+}
+.SectionHero__btn:hover {
+  opacity: 0.85;
+}
+.SectionHero__scrollHint {
+  z-index: 1;
+  bottom: var(--sp-24);
+  border: 1px solid var(--color-slate-200);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  cursor: pointer;
+  appearance: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  border-radius: 96px;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 12px;
+  line-height: 20px;
+  animation: 0.8s cubic-bezier(0.33, 1, 0.68, 1) 1.2s both
+    SectionHero__hero-cue-in;
+  display: inline-flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.SectionHero__scrollHint:hover {
+  opacity: 0.85;
+}
+.SectionHero__scrollHint:focus {
+  outline: none;
+}
+.SectionHero__scrollHint:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.SectionHero__scrollHint svg {
+  animation: 1.6s ease-in-out 2s infinite SectionHero__scroll-hint-pulse;
+}
+.SectionHero__scrollHint[data-still] svg {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionHero__scrollHint,
+  .SectionHero__scrollHint svg {
+    animation: none;
+  }
+}
+@keyframes SectionHero__hero-cue-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 18px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%);
+  }
+}
+@keyframes SectionHero__scroll-hint-pulse {
+  0%,
+  to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+

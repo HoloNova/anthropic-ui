@@ -1,0 +1,17 @@
+/* 本地重写的少量补充：页头/菜单样式本身来自原站样式表。 */
+.study-nav[hidden] {
+  display: none !important;
+}
+.study-nav a:focus-visible,
+.study-nav button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.study-error {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 24px;
+}
+.study-error pre {
+  white-space: pre-wrap;
+}

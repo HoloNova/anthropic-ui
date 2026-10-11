@@ -1,0 +1,670 @@
+/* 设计元素图鉴的版式。
+   布局参考 claude.dev 的文章页：12 栏网格 + sticky 侧栏 + 窄正文列；
+   配色、字体、笔触全部用本项目自己的 ivory 主题与绘制函数。 */
+
+.lab {
+  --lab-gutter: 32px;
+  --lab-prose: 660px;
+  --lab-rail: 288px;
+  /* 正文列宽：在侧栏右侧的剩余区域里居中，按比例取值并夹在上下限之间。
+     64% ≈ 经典排版的文字块 : 页边距 = 2 : 1；
+     下限 880px 保证 demo 画布不小于 596px（viewBox 多为 700px，缩放比 0.85 以上）；
+     上限 1040px 避免超宽屏上行长失控。 */
+  --lab-main-ratio: 64%;
+  --lab-main-min: 880px;
+  --lab-main-max: 1040px;
+  /* 比例横条用到的三个墨色，原定义在 EconomicFutures.css 的页面容器上。 */
+  --ink-labour: #217d5d;
+  --ink-capital: #87867f;
+  --ink-moved: #1a1918;
+  min-height: 100vh;
+}
+
+/* ---------- 窄屏顶部的 1px 阅读进度线 ---------- */
+
+.lab-prog {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  display: none;
+  height: 1px;
+  background: var(--foreground-primary);
+  transform: scaleX(var(--p, 0));
+  transform-origin: 0 50%;
+}
+
+/* ---------- 顶栏 ---------- */
+
+.lab-top {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--sp-12) var(--sp-24);
+  padding: var(--sp-32) var(--lab-gutter) var(--sp-20);
+}
+
+.lab-top__title {
+  font-family: var(--anthropic-serif), serif;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.lab-top__sub {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 14px;
+  color: var(--color-slate-500);
+  margin: 0;
+}
+
+/* 项目名指向官方源站；顶栏里不加下划线，只靠颜色变化。 */
+.lab-top__origin {
+  color: var(--color-slate-650);
+  text-decoration: none;
+}
+
+.lab-top__origin:hover,
+.lab-top__origin:focus-visible {
+  color: var(--foreground-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.lab-top__sep {
+  color: var(--color-slate-400);
+}
+
+.lab-top__spacer {
+  flex: 1;
+}
+
+.lab-top__link {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  color: var(--color-slate-600);
+  text-decoration: none;
+}
+
+.lab-top__link:hover {
+  color: var(--foreground-primary);
+}
+
+/* ---------- 侧栏 + 正文 ---------- */
+
+.lab-body {
+  display: grid;
+  /* 侧栏固定宽并靠视口左边；正文自适应但不超过 --lab-main。 */
+  grid-template-columns: var(--lab-rail) minmax(0, 1fr);
+  gap: 40px;
+  padding: var(--sp-32) var(--lab-gutter) var(--sp-128);
+}
+
+.lab-main {
+  /* 在侧栏右侧的剩余区域里居中，而不是紧贴侧栏。 */
+  width: min(100%, clamp(var(--lab-main-min), var(--lab-main-ratio), var(--lab-main-max)));
+  margin-inline: auto;
+  min-width: 0;
+}
+
+/* 侧边栏。规则逐条对照原站 .rail 那一段（见下方注释里的原值），
+   只把变量名映射到本项目的 slate 色阶，并因中文可读性把字号放大一档。 */
+
+.rail {
+  font-family: var(--anthropic-mono);
+  align-self: start;
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 4rem);
+  min-height: 0;
+  /* 原站 --type-tree: .75rem = 12px，那是英文的字号；中文同字号视觉偏小，取 14px。 */
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.rail__title {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--foreground-primary);
+  text-wrap: balance;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s var(--ease-out-quart),
+    max-height 0.4s ease,
+    margin 0.4s ease;
+}
+
+.rail__title[data-on="true"] {
+  opacity: 1;
+  max-height: 240px;
+  margin-bottom: var(--sp-24);
+  transform: none;
+}
+
+.rail__th {
+  letter-spacing: 0.02em;
+  color: var(--color-slate-400);
+  margin-bottom: var(--sp-12);
+  font-size: 13px;
+  line-height: normal;
+}
+
+.rail__group {
+  display: block;
+}
+
+.rail__link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 2px 0;
+  color: var(--color-slate-600);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s ease;
+}
+
+.rail__link:hover,
+.rail__link[aria-current="true"] {
+  color: var(--foreground-primary);
+}
+
+.rail__br {
+  margin-right: 10px;
+  color: var(--color-slate-350);
+}
+
+.rail__link[aria-current="true"] .rail__br {
+  color: var(--color-slate-500);
+}
+
+.rail__no {
+  margin-left: var(--sp-8);
+  font-size: 12px;
+  color: var(--color-slate-300);
+}
+
+.rail__link--sub {
+  padding-left: 18px;
+  color: var(--color-slate-500);
+}
+
+/* 子项只在「当前章节」或「鼠标悬停」时展开。grid-template-rows 0fr→1fr
+   不需要预先知道高度，比 max-height 动画干净。 */
+.rail__subs {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.3s var(--ease-out-quart),
+    visibility 0.3s;
+}
+
+/* 原站用 -3px/3px 的负边距把内层撑出去，折叠时子项不可点，展开后恢复。 */
+.rail__subs > div {
+  pointer-events: none;
+  min-height: 0;
+  margin: -3px;
+  padding: 3px;
+  overflow: hidden;
+}
+
+.rail__subs a {
+  pointer-events: auto;
+}
+
+.rail__group[data-open="true"] .rail__subs,
+.rail__group:hover .rail__subs,
+.rail__group:focus-within .rail__subs {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+/* 进度条：▓ 已读 / ░ 未读，字符由 .rail 的等宽 fallback 渲染，所以能连成一条。 */
+.rail__prog {
+  margin-top: var(--sp-24);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--color-slate-350);
+}
+
+.rail__prog b {
+  font-weight: 400;
+  color: var(--color-slate-950);
+}
+
+.rail__pct {
+  margin-left: var(--sp-8);
+  color: var(--color-slate-600);
+}
+
+.rail__hint {
+  margin-top: var(--sp-12);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--color-slate-400);
+}
+
+.rail__arr {
+  color: var(--color-slate-600);
+}
+
+.rail__foot {
+  margin-top: auto;
+  padding-top: var(--sp-24);
+}
+
+.rail__foot .rail__th {
+  margin-bottom: var(--sp-8);
+}
+
+.rail__foot a {
+  display: block;
+  width: fit-content;
+  padding: 2px 0;
+  color: var(--color-slate-600);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.rail__foot a:hover {
+  color: var(--foreground-primary);
+}
+
+/* ---------- 章节 ---------- */
+
+.lab-part {
+  margin-bottom: var(--sp-96);
+  scroll-margin-top: var(--sp-24);
+}
+
+.lab-part__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-12);
+  padding-bottom: var(--sp-12);
+  margin-bottom: var(--sp-20);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lab-part__no {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 14px;
+  color: var(--color-slate-650);
+}
+
+.lab-part__title {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-slate-950);
+  margin: 0;
+}
+
+.lab-part__lede {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-slate-650);
+  margin: 0 0 var(--sp-24);
+  max-width: var(--lab-prose);
+}
+
+/* ---------- 元素卡：去框，用细线与留白分段 ---------- */
+
+.lab-card {
+  padding-top: var(--sp-32);
+  margin-bottom: var(--sp-48);
+  border-top: 1px solid var(--border-faint);
+  scroll-margin-top: var(--sp-24);
+}
+
+.lab-card__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--sp-12);
+  margin-bottom: var(--sp-8);
+}
+
+.lab-card__idx {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 14px;
+  color: var(--color-slate-650);
+}
+
+.lab-card__title {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--foreground-primary);
+}
+
+.lab-card__title code {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--background-clay);
+}
+
+.lab-card__tags {
+  display: flex;
+  gap: var(--sp-6);
+  margin-left: auto;
+}
+
+.lab-card__summary {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-slate-650);
+  margin: 0 0 var(--sp-20);
+  max-width: var(--lab-prose);
+}
+
+.lab-card__body {
+  margin-bottom: var(--sp-20);
+  /* 画布与控件按自然高度排版，不增加额外占位。 */
+}
+
+.lab-card__foot {
+  /* 源码与演示对齐；660px 只限制说明文字，不限制代码区域。 */
+  width: 100%;
+  min-width: 0;
+}
+
+.lab-chip {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  padding: 2px 7px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  color: var(--color-slate-500);
+  white-space: nowrap;
+}
+
+.lab-chip[data-tone="core"] {
+  border-color: var(--background-clay);
+  color: var(--background-clay);
+}
+
+.lab-chip[data-tone="api"] {
+  border-color: var(--color-sky);
+  color: var(--color-sky);
+}
+
+/* ---------- 要点 ---------- */
+
+.lab-notes {
+  display: grid;
+  gap: var(--sp-20);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.lab-notes__col h4 {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 15px;
+  color: var(--color-slate-950);
+  margin: 0 0 var(--sp-8);
+  font-weight: 500;
+}
+
+.lab-notes__col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-slate-650);
+}
+
+.lab-notes__col li {
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.lab-notes__col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 5px;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.lab-notes__col li[data-warn="true"]::before {
+  background: var(--background-clay);
+  width: 7px;
+}
+
+.lab-notes__col li code,
+.lab-card__summary code,
+.lab-part__lede code {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 0.88em;
+  background: var(--background-secondary);
+  padding: 0 3px;
+  border-radius: 2px;
+  color: var(--foreground-primary);
+}
+
+/* ---------- 源码折叠 ---------- */
+
+.lab-fold {
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  background: var(--background-secondary);
+  margin-top: var(--sp-16);
+  overflow: hidden;
+}
+
+.lab-fold__sum {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-8);
+  cursor: pointer;
+  padding: var(--sp-8) var(--sp-12);
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  color: var(--color-slate-600);
+  list-style: none;
+  user-select: none;
+}
+
+.lab-fold__sum::-webkit-details-marker {
+  display: none;
+}
+
+.lab-fold__sum::before {
+  content: "▸";
+  font-size: 9px;
+  color: var(--color-slate-400);
+}
+
+.lab-fold[open] > .lab-fold__sum::before {
+  content: "▾";
+}
+
+.lab-fold__sum:hover {
+  background: var(--background-tertiary);
+}
+
+.lab-fold__meta {
+  margin-left: auto;
+  color: var(--color-slate-400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lab-fold__pre {
+  margin: 0;
+  padding: var(--sp-12) var(--sp-16);
+  border-top: 1px solid var(--border-subtle);
+  background: var(--background-primary);
+  overflow: auto;
+  max-height: 460px;
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--foreground-primary);
+  tab-size: 2;
+}
+
+/* ---------- 按钮与提示 ---------- */
+
+.lab-btn {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  background: var(--background-primary);
+  color: var(--color-slate-650);
+  cursor: pointer;
+}
+
+.lab-btn:hover {
+  border-color: var(--foreground-primary);
+  color: var(--foreground-primary);
+}
+
+.lab-btn[data-active="true"] {
+  background: var(--foreground-primary);
+  border-color: var(--foreground-primary);
+  color: var(--background-primary);
+}
+
+.lab-btnbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-6);
+  align-items: center;
+}
+
+.lab-hint {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-slate-500);
+  margin: 0;
+}
+
+.lab-empty {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 14px;
+  color: var(--color-slate-400);
+}
+
+/* ---------- 页脚 ---------- */
+
+.lab-foot {
+  margin-top: var(--sp-64);
+  padding-top: var(--sp-20);
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-slate-500);
+  max-width: var(--lab-prose);
+}
+
+.lab-foot code {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 0.9em;
+  background: var(--background-secondary);
+  padding: 0 3px;
+  border-radius: 2px;
+  color: var(--foreground-primary);
+}
+
+/* ---------- 窄屏：侧栏折成横向章节条 ---------- */
+
+@media (max-width: 1080px) {
+  .lab-prog {
+    display: block;
+  }
+
+  .lab-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-24);
+    padding-top: var(--sp-16);
+  }
+
+  .lab-main {
+    width: 100%;
+  }
+
+  .rail {
+    position: static;
+    min-height: 0;
+    height: auto;
+    margin: 0 0 var(--sp-32);
+    padding-bottom: var(--sp-16);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .rail__title {
+    display: none;
+  }
+
+  .rail__tree {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 18px;
+  }
+
+  .rail__subs,
+  .rail__no,
+  .rail__th,
+  .rail__prog,
+  .rail__hint {
+    display: none;
+  }
+
+  .rail__foot {
+    display: flex;
+    gap: 18px;
+    margin-top: var(--sp-16);
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .lab {
+    --lab-gutter: 20px;
+  }
+
+  .lab-top {
+    padding-top: var(--sp-20);
+  }
+
+  .lab-part__title {
+    font-size: 18px;
+  }
+
+  .lab-part__lede,
+  .lab-card__summary {
+    font-size: 15px;
+  }
+}

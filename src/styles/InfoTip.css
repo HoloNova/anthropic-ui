@@ -1,0 +1,61 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.InfoTip__wrap {
+  margin-left: var(--sp-8);
+  flex: none;
+  align-items: center;
+  display: inline-flex;
+}
+.InfoTip__button {
+  z-index: 1;
+  color: var(--color-slate-500);
+  cursor: pointer;
+  appearance: none;
+  background: 0 0;
+  border: 0;
+  border-radius: 96px;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+.InfoTip__button:hover {
+  color: var(--foreground-primary);
+}
+.InfoTip__button:focus {
+  outline: none;
+}
+.InfoTip__button:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.InfoTip__icon {
+  display: block;
+}
+.InfoTip__tip {
+  z-index: 6;
+  top: calc(100% + var(--sp-6));
+  box-sizing: border-box;
+  padding: var(--sp-8) var(--sp-12);
+  border: 1px solid var(--color-slate-250);
+  border-radius: var(--br-8);
+  background: var(--color-slate-000);
+  color: var(--foreground-tertiary);
+  pointer-events: auto;
+  text-wrap: pretty;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 2.5px #00000012;
+}
+.InfoTip__tip[data-above] {
+  top: auto;
+  bottom: calc(100% + var(--sp-6));
+}
+

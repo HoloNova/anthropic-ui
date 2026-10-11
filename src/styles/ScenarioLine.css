@@ -1,0 +1,36 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.ScenarioLine__scenarioLine {
+  width: 100%;
+  padding-top: var(--sp-32);
+  margin: auto 0 0;
+}
+.ScenarioLine__lineYou {
+  fill: var(--foreground-primary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  font-weight: 400;
+}
+.ScenarioLine__lineName {
+  fill: var(--color-slate-500);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+}
+.ScenarioLine__lineWere {
+  fill: var(--foreground-primary);
+  opacity: 0.4;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+}
+

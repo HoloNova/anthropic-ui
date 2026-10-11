@@ -1,0 +1,158 @@
+[
+  {
+    "_key": "7445283cdc57",
+    "category": "Research",
+    "displayType": "sections",
+    "sections": [
+      {
+        "_key": "51b9b388785c",
+        "links": [
+          {
+            "title": "Overview",
+            "url": "/research"
+          },
+          {
+            "title": "Alignment",
+            "url": "/research/team/alignment"
+          },
+          {
+            "title": "Economics",
+            "url": "/research/team/economics"
+          },
+          {
+            "title": "Engineering",
+            "url": "/engineering"
+          },
+          {
+            "title": "Frontier Red Team",
+            "url": "/research/team/frontier-red-team"
+          },
+          {
+            "title": "Interpretability",
+            "url": "/research/team/interpretability"
+          },
+          {
+            "title": "Science",
+            "url": "/science"
+          },
+          {
+            "title": "Societal Impacts",
+            "url": "/research/team/societal-impacts"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_key": "a483c7dfd38a",
+    "category": "Policy",
+    "displayType": "singleLink",
+    "sections": null,
+    "url": "/policy"
+  },
+  {
+    "_key": "82c471bd311d",
+    "category": "Commitments",
+    "displayType": "sections",
+    "sections": [
+      {
+        "_key": "675871636e4d",
+        "links": [
+          {
+            "title": "Claude’s Constitution",
+            "url": "/constitution"
+          },
+          {
+            "title": "Claude Corps",
+            "url": "/claude-corps"
+          },
+          {
+            "title": "Policy on the AI Exponential",
+            "url": "/policy-on-the-ai-exponential"
+          },
+          {
+            "title": " Transparency",
+            "url": "/transparency"
+          },
+          {
+            "title": "Responsible Scaling Policy",
+            "url": "/responsible-scaling-policy"
+          },
+          {
+            "title": "Beneficial Deployments",
+            "url": "/beneficial-deployments"
+          }
+        ],
+        "title": "Initiatives"
+      },
+      {
+        "_key": "16af50a6e2dd",
+        "links": [
+          {
+            "title": "Security and compliance",
+            "url": "https://trust.anthropic.com/"
+          }
+        ],
+        "title": "Trust center"
+      }
+    ]
+  },
+  {
+    "_key": "861a11ed9931",
+    "category": "Learn",
+    "displayType": "sections",
+    "sections": [
+      {
+        "_key": "9f9f720a8793",
+        "links": [
+          {
+            "title": "Claude Academy",
+            "url": "https://academy.claude.com"
+          },
+          {
+            "title": "Tutorials",
+            "url": "https://claude.com/resources/tutorials"
+          },
+          {
+            "title": "Use cases",
+            "url": "https://claude.com/resources/use-cases"
+          },
+          {
+            "title": "Developer docs",
+            "url": "https://platform.claude.com/docs"
+          }
+        ],
+        "title": "Learn"
+      },
+      {
+        "_key": "6bd061c46b10",
+        "links": [
+          {
+            "title": "About",
+            "url": "/company"
+          },
+          {
+            "title": "Leadership",
+            "url": "/company/leadership"
+          },
+          {
+            "title": "Careers",
+            "url": "/careers"
+          },
+          {
+            "title": "Events",
+            "url": "/events"
+          }
+        ],
+        "title": "Company"
+      }
+    ]
+  },
+  {
+    "_key": "22e8d8d2923d",
+    "category": "News",
+    "displayType": "singleLink",
+    "sections": null,
+    "url": "/news"
+  }
+]

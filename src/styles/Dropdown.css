@@ -1,0 +1,82 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.Dropdown__dropdown {
+  z-index: 100;
+  margin-top: var(--sp-8);
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--color-slate-050);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-ivory-medium);
+  min-width: 250px;
+  padding: var(--sp-24);
+  animation: 0.2s ease-in-out forwards Dropdown__dropdown-fade-in;
+  position: absolute;
+  top: calc(100% + 1px);
+  box-shadow:
+    0 2px 2px #00000003,
+    0 4px 4px #00000005,
+    0 16px 24px #0000000a;
+}
+.Dropdown__dropdown[data-align="center"] {
+  left: 50%;
+  transform: translate(-50%);
+}
+.Dropdown__dropdown[data-align="left"] {
+  left: 0;
+}
+.Dropdown__dropdown[data-align="right"] {
+  right: 0;
+}
+@keyframes Dropdown__dropdown-fade-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.Dropdown__dropdownSection {
+  gap: var(--sp-8);
+  padding-bottom: var(--sp-16);
+  border-bottom: 1px solid var(--color-ivory-dark);
+  margin-bottom: var(--sp-16);
+  flex-direction: column;
+  display: flex;
+}
+.Dropdown__dropdownSection:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.Dropdown__dropdownSectionTitle {
+  color: var(--color-slate-600);
+  margin: 0;
+}
+.Dropdown__dropdownLinks {
+  gap: var(--sp-8);
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.Dropdown__dropdownLink {
+  color: var(--color-dark);
+  text-underline-offset: 0.2em;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+.Dropdown__dropdownLink svg {
+  color: var(--color-slate-450);
+}
+.Dropdown__dropdownLink:hover {
+  text-decoration: underline;
+}
+.Dropdown__dropdownLink:hover svg {
+  color: var(--color-slate-dark);
+}
+

@@ -1,0 +1,154 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.AdvancedControls__panel {
+  gap: var(--sp-4);
+  flex-direction: column;
+  display: flex;
+}
+.AdvancedControls__section {
+  margin: var(--sp-24) 0 0;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  line-height: 20px;
+  font-weight: var(--weight-text-regular);
+}
+.AdvancedControls__section:first-child {
+  margin-top: 0;
+}
+.AdvancedControls__group {
+  border-bottom: 1px solid var(--color-slate-200);
+}
+.AdvancedControls__groupHead {
+  align-items: center;
+  gap: var(--sp-12);
+  width: 100%;
+  padding: var(--sp-6) 0;
+  color: var(--foreground-primary);
+  text-align: left;
+  display: flex;
+  position: relative;
+}
+.AdvancedControls__groupToggle {
+  cursor: pointer;
+  appearance: none;
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  inset: 0;
+}
+.AdvancedControls__groupToggle:focus {
+  outline: none;
+}
+.AdvancedControls__groupToggle:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.AdvancedControls__groupHead:hover .AdvancedControls__groupTitle,
+.AdvancedControls__groupHead:hover .AdvancedControls__chevron {
+  opacity: 0.85;
+}
+.AdvancedControls__groupTitleWrap {
+  flex: auto;
+  align-items: center;
+  min-width: 0;
+  display: flex;
+}
+.AdvancedControls__groupTitle {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .AdvancedControls__groupTitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.AdvancedControls__groupTitle p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.AdvancedControls__groupTitle {
+  flex: 0 auto;
+}
+.AdvancedControls__chevron {
+  color: var(--foreground-tertiary);
+  pointer-events: none;
+  flex: none;
+  transition: transform 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.AdvancedControls__group[data-open="true"] .AdvancedControls__chevron {
+  transform: rotate(180deg);
+}
+.AdvancedControls__reveal {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+  display: grid;
+}
+.AdvancedControls__groupBody {
+  gap: var(--sp-12);
+  visibility: hidden;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0;
+  transition:
+    padding 0.2s cubic-bezier(0.32, 0.72, 0, 1),
+    visibility 0s 0.2s;
+  display: flex;
+  overflow: clip;
+}
+.AdvancedControls__group[data-open="true"] .AdvancedControls__reveal {
+  grid-template-rows: 1fr;
+}
+.AdvancedControls__group[data-open="true"] .AdvancedControls__groupBody {
+  padding: var(--sp-4) 0 var(--sp-16);
+  visibility: visible;
+  transition: padding 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.AdvancedControls__row {
+  gap: var(--sp-4);
+  flex-direction: column;
+  display: flex;
+}
+.AdvancedControls__rowHead {
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-12);
+  display: flex;
+}
+.AdvancedControls__rowLabel {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-primary);
+  line-height: 20px;
+}
+.AdvancedControls__rowValue {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  font-variant-numeric: tabular-nums;
+  line-height: 20px;
+}
+

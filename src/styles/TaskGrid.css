@@ -1,0 +1,209 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.TaskGrid__wrap {
+  flex-direction: column;
+  width: 100%;
+  max-width: 665px;
+  display: flex;
+  position: relative;
+}
+@media (min-width: 1101px) {
+  .TaskGrid__wrap {
+    max-width: min(665px, var(--stage-h-safe, 100vh) - 90px);
+  }
+}
+.TaskGrid__sheetBox {
+  width: 100%;
+  margin-top: calc(28px - var(--sheet-top-border, 0%));
+  position: relative;
+}
+.TaskGrid__markRule {
+  opacity: 1;
+  transition: opacity 0.24s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.TaskGrid__yearLabel {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-variant-numeric: tabular-nums;
+}
+@media (prefers-reduced-motion: reduce) {
+  .TaskGrid__markRule {
+    transition: none;
+  }
+}
+.TaskGrid__annotation {
+  z-index: 2;
+  box-sizing: border-box;
+  left: min(var(--annotation-x, 100%), 100% - 72px);
+  border: 1px solid var(--color-slate-250);
+  border-radius: var(--br-8);
+  background: var(--color-slate-000);
+  width: 120px;
+  color: var(--foreground-tertiary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  pointer-events: none;
+  margin-left: 10px;
+  padding: 4px 12px;
+  line-height: 16px;
+  transition: top 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  position: absolute;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 2.5px #00000012;
+}
+@media (prefers-reduced-motion: reduce) {
+  .TaskGrid__annotation {
+    transition: none;
+  }
+}
+.TaskGrid__hint {
+  z-index: 2;
+  box-sizing: border-box;
+  border: 1px solid var(--color-slate-250);
+  border-radius: var(--br-8);
+  background: var(--color-slate-000);
+  width: max-content;
+  max-width: 100%;
+  color: var(--foreground-tertiary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  margin: 0;
+  padding: 4px 12px;
+  line-height: 16px;
+  transition: opacity 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(20px - 100%));
+  box-shadow: 0 4px 2.5px #00000012;
+}
+.TaskGrid__hintOn {
+  opacity: 1;
+}
+.TaskGrid__grid {
+  aspect-ratio: 1;
+  width: 100%;
+  display: block;
+  overflow: visible;
+}
+.TaskGrid__paintable {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.TaskGrid__sline {
+  clip-path: inset(0);
+  transition: clip-path var(--dash-dur, 0.24s) cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--dd, 0s) + var(--dash-hold, 0s));
+}
+.TaskGrid__soff {
+  clip-path: inset(0 100% 0 0);
+}
+.TaskGrid__wband {
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.TaskGrid__ink {
+  transition:
+    opacity 0.14s cubic-bezier(0.32, 0.72, 0, 1) var(--fade-delay, 0s),
+    color 0.34s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.TaskGrid__on {
+  opacity: 1;
+  --dash-dur: 0.24s;
+  --dash-hold: 0s;
+  --fade-delay: 0s;
+}
+.TaskGrid__off {
+  opacity: 0;
+  --dash-dur: 0s;
+  --dash-hold: 0.49s;
+  --fade-delay: 0.35s;
+}
+.TaskGrid__legend {
+  justify-content: center;
+  gap: var(--sp-8) var(--sp-16);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  flex-wrap: wrap;
+  margin: -24px 0 0;
+  padding: 0;
+  line-height: 20px;
+  list-style: none;
+  display: flex;
+}
+.TaskGrid__legendItem {
+  align-items: center;
+  gap: 7px;
+  display: inline-flex;
+}
+.TaskGrid__chip {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.TaskGrid__chipMark {
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  inset: -20%;
+  overflow: visible;
+}
+@media (prefers-reduced-motion: reduce) {
+  .TaskGrid__sline,
+  .TaskGrid__ink {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
+.TaskGrid__sizePair {
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
+}
+.TaskGrid__chipSmall {
+  width: 9px;
+  height: 9px;
+}
+.TaskGrid__chipLarge {
+  width: 15px;
+  height: 15px;
+}
+@media (max-width: 700px) {
+  .TaskGrid__sheetBox {
+    width: calc(100% / (1 - 2 * var(--sheet-side-share, 0)));
+    margin: calc(
+        -1 * var(--sheet-top-border, 0%) / (1 - 2 * var(--sheet-side-share, 0))
+      )
+      calc((100% - 100% / (1 - 2 * var(--sheet-side-share, 0))) / 2);
+  }
+  .TaskGrid__annotation {
+    left: min(var(--annotation-x, 100%), 50% + 50vw - 154px);
+    padding: 4px 8px;
+  }
+  .TaskGrid__legend {
+    margin-top: 16px;
+  }
+}
+

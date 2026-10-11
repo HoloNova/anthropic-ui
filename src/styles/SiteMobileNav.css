@@ -1,0 +1,153 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.SiteMobileNav__root {
+  --background-color: #faf9f5;
+  --border-light: #f0eee6;
+  --transition-duration: 0.2s;
+  --footer-height: 132px;
+  background: var(--background-color);
+  color: var(--foreground-primary);
+  height: 100%;
+  padding-bottom: var(--footer-height);
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.SiteMobileNav__header {
+  border-bottom: 1px solid var(--border-light);
+  padding-block: var(--sp-16);
+  background: var(--background-color);
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.SiteMobileNav__logoMobile {
+  display: block;
+}
+.SiteMobileNav__closeIcon {
+  color: inherit;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  padding: 0;
+}
+.SiteMobileNav__closeIcon:hover {
+  opacity: 0.8;
+}
+.SiteMobileNav__categoryWrapper {
+  border-bottom: 1px solid var(--border-light);
+}
+.SiteMobileNav__categoryWrapper:last-child {
+  border-bottom: none;
+}
+.SiteMobileNav__category {
+  color: var(--color-slate-dark);
+  cursor: pointer;
+  padding: var(--sp-24) 0;
+  background: 0 0;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+.SiteMobileNav__category:hover {
+  opacity: 0.8;
+}
+.SiteMobileNav__category.SiteMobileNav__active {
+  color: var(--color-slate-dark);
+}
+.SiteMobileNav__icon {
+  transition: transform var(--transition-duration) ease;
+  flex-shrink: 0;
+}
+.SiteMobileNav__icon.SiteMobileNav__iconOpen {
+  transform: scaleY(-1);
+}
+.SiteMobileNav__sectionLinks {
+  animation: SiteMobileNav__slide-down var(--transition-duration) ease forwards;
+  padding-bottom: var(--sp-24);
+  overflow: hidden;
+}
+.SiteMobileNav__section {
+  padding-bottom: var(--sp-24);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--sp-24);
+}
+.SiteMobileNav__section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.SiteMobileNav__sectionTitle {
+  margin-bottom: var(--sp-12);
+}
+.SiteMobileNav__links {
+  gap: var(--sp-12);
+  flex-direction: column;
+  display: flex;
+}
+.SiteMobileNav__link {
+  color: var(--color-slate-dark);
+  text-underline-offset: 0.2em;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+.SiteMobileNav__link svg {
+  color: var(--color-slate-450);
+}
+.SiteMobileNav__link:hover {
+  text-decoration: underline;
+}
+.SiteMobileNav__link:hover svg {
+  color: var(--color-slate-dark);
+}
+@keyframes SiteMobileNav__slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.SiteMobileNav__footerButtonGroup {
+  background: var(--background-color);
+  min-height: var(--footer-height);
+  padding: var(--sp-16);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.SiteMobileNav__footerButtonGroup .SiteMobileNav__footerButton {
+  width: 100%;
+}
+.SiteMobileNav__footerButtonGroup .SiteMobileNav__footerButton:first-of-type {
+  background-color: #c6613f !important;
+  border-color: #c6613f !important;
+}
+.SiteMobileNav__footerButtonGroup
+  .SiteMobileNav__footerButton:first-of-type:hover {
+  background-color: var(--color-clay) !important;
+  border-color: var(--color-clay) !important;
+}
+.SiteMobileNav__footerButtonGroup .SiteMobileNav__footerButton:nth-of-type(2) {
+  border-color: var(--border-light) !important;
+}
+

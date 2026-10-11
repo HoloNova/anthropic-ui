@@ -1,0 +1,12 @@
+{
+  "econSurveyIntake": true,
+  "irisOverlay": false,
+  "econScenarios": true,
+  "econSurveyResults": true,
+  "claudeModelPages": false,
+  "cepi": true,
+  "featurePacing": true,
+  "antTagManager": true,
+  "projectMoby": true,
+  "econHubTimeFeatures": false
+}

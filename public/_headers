@@ -1,0 +1,22 @@
+# Netlify / Cloudflare Pages 会读取这个文件；其它静态托管可忽略，或按同样规则配置。
+#
+# 1) markdown 必须带 charset：否则浏览器直接打开 /component.md 时会按系统默认编码
+#    （中文 Windows 是 GBK）解码，UTF-8 的中文会变成乱码。
+#    Vite 开发服务器与 preview 由 vite.config.js 里的中间件补这个头。
+# 2) 带哈希的构建产物可以长期缓存；HTML 与 markdown 每次都校验。
+#
+# 部署到 Vercel 时把同样的规则写进 vercel.json 的 headers；
+# 部署到 GitHub Pages 无法自定义响应头，需要给 /component.md 加 UTF-8 BOM。
+
+/component.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.svg
+  Cache-Control: public, max-age=604800

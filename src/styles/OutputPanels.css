@@ -1,0 +1,238 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.OutputPanels__grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  display: grid;
+}
+@media (min-width: 992px) {
+  .OutputPanels__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .OutputPanels__panelWide {
+    grid-column: 1/-1;
+  }
+}
+.OutputPanels__panel {
+  padding: var(--sp-16);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  container-type: inline-size;
+}
+.OutputPanels__panelFoot {
+  padding-top: var(--sp-12);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: auto;
+  display: flex;
+}
+@container (min-width:640px) {
+  .OutputPanels__panelFoot {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px 48px;
+  }
+}
+.OutputPanels__panelHead {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0 0 12px;
+}
+@media (max-width: 700px) {
+  .OutputPanels__panelHead {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.OutputPanels__panelHead p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.OutputPanels__panelHead {
+  color: var(--foreground-primary);
+}
+.OutputPanels__gdpRows {
+  --bar-ink: var(--color-slate-500);
+  --bar-gutter: 82px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+  min-height: 190px;
+  display: flex;
+}
+.OutputPanels__gdpRow {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+.OutputPanels__gdpName {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  flex: 0 0 42px;
+}
+.OutputPanels__waffle {
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 190px;
+  display: flex;
+}
+.OutputPanels__waffleRow {
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 58px;
+  display: flex;
+}
+.OutputPanels__splitRead {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  margin: 2px 0 0;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+}
+.OutputPanels__splitLabour {
+  flex: 0 0 calc(100% * var(--split-at, 0.5));
+  white-space: nowrap;
+  padding-right: 8px;
+}
+.OutputPanels__splitCapital {
+  white-space: nowrap;
+  min-width: 0;
+}
+.OutputPanels__waffleName {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+}
+.OutputPanels__flowNote {
+  max-width: 70ch;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: 0;
+  line-height: 1.45;
+}
+.OutputPanels__priceBase {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: 4px 0 0;
+  line-height: 1.45;
+}
+.OutputPanels__panelNote {
+  margin: 0;
+}
+.OutputPanels__panelNote b {
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.OutputPanels__panelNote {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  line-height: 1.45;
+}
+.OutputPanels__column {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  display: grid;
+}
+@media (min-width: 992px) {
+  .OutputPanels__column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.OutputPanels__column .OutputPanels__panel {
+  padding: 14px;
+}
+.OutputPanels__column .OutputPanels__waffle {
+  max-width: 300px;
+}
+.OutputPanels__column .OutputPanels__bars {
+  min-height: 100px;
+}
+.OutputPanels__column .OutputPanels__gdpRows {
+  gap: 20px;
+  min-height: 100px;
+}
+@media (min-width: 992px) {
+  .OutputPanels__column .OutputPanels__panel:last-child {
+    grid-column: 1/-1;
+  }
+}
+.OutputPanels__column .OutputPanels__panel:last-child svg {
+  max-width: 360px;
+  margin: 0 auto;
+  display: block;
+}
+.OutputPanels__mini {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+.OutputPanels__mini .OutputPanels__panel {
+  padding: 12px;
+}
+.OutputPanels__mini .OutputPanels__panelHead {
+  font-size: var(--type-11, 11px);
+  margin-bottom: 8px;
+}
+.OutputPanels__mini .OutputPanels__waffle {
+  gap: 8px;
+  max-width: 240px;
+  min-height: 0;
+}
+.OutputPanels__mini .OutputPanels__bars {
+  gap: 18px;
+  min-height: 110px;
+}
+.OutputPanels__mini .OutputPanels__gdpRows {
+  --bar-gutter: 76px;
+  gap: 16px;
+  min-height: 0;
+}
+.OutputPanels__mini .OutputPanels__bar {
+  flex-basis: 44px;
+  min-width: 44px;
+  max-width: 44px;
+}
+.OutputPanels__mini svg {
+  max-width: 260px;
+  margin: 0;
+  display: block;
+}
+.OutputPanels__waffleHead {
+  align-items: baseline;
+  gap: 8px;
+  display: flex;
+}
+.OutputPanels__single {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+

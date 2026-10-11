@@ -1,0 +1,462 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.ResultPortrait__head {
+  gap: var(--sp-6);
+  flex-direction: column;
+  display: flex;
+}
+.ResultPortrait__eyebrow {
+  color: var(--foreground-tertiary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  margin: 0;
+  line-height: 20px;
+}
+.ResultPortrait__question {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .ResultPortrait__question {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.ResultPortrait__question p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.ResultPortrait__big {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-28, 28px);
+  font-weight: var(--weight-display-regular);
+  margin: 0;
+  line-height: 1;
+}
+.ResultPortrait__sub {
+  color: var(--color-slate-500);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  margin: 0;
+  line-height: 20px;
+}
+.ResultPortrait__cap {
+  color: var(--foreground-secondary);
+  white-space: nowrap;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  margin: 0;
+  line-height: 20px;
+}
+.ResultPortrait__capFaint {
+  color: var(--color-slate-500);
+}
+.ResultPortrait__svg {
+  display: block;
+}
+.ResultPortrait__forecastBody {
+  gap: var(--sp-6);
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+.ResultPortrait__verdict {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-22, 22px);
+  font-weight: var(--weight-text-regular);
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 1.45455;
+}
+@media (max-width: 700px) {
+  .ResultPortrait__verdict {
+    line-height: 1.5;
+  }
+}
+.ResultPortrait__scenarioWord {
+  white-space: nowrap;
+  position: relative;
+}
+.ResultPortrait__scenarioUnderline {
+  pointer-events: none;
+  position: absolute;
+  bottom: -10px;
+  left: -6px;
+}
+.ResultPortrait__chart {
+  flex: 1;
+  min-height: 240px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__chart {
+    min-height: 0;
+  }
+}
+.ResultPortrait__gdpFigure {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  display: flex;
+  position: absolute;
+  top: 40px;
+  right: 8%;
+}
+.ResultPortrait__gdpFigureRight {
+  text-align: right;
+  align-items: flex-end;
+}
+.ResultPortrait__delta {
+  color: var(--color-slate-500);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+  line-height: 20px;
+  display: flex;
+}
+.ResultPortrait__deltaIcon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.ResultPortrait__axisStart {
+  gap: 4px;
+  display: flex;
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+}
+.ResultPortrait__axisEnd {
+  position: absolute;
+  bottom: 6px;
+  right: 20px;
+}
+.ResultPortrait__tileFoot {
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: auto;
+  display: flex;
+}
+.ResultPortrait__leadCap {
+  color: var(--ink-no-ai, #9c9a92);
+  position: absolute;
+  right: 20px;
+}
+.ResultPortrait__unempKey {
+  margin-top: 8px;
+  position: relative;
+}
+.ResultPortrait__unempFull {
+  flex: auto;
+  align-self: stretch;
+  min-width: 0;
+  display: flex;
+  position: relative;
+}
+.ResultPortrait__unempOverlay {
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  display: flex;
+  position: absolute;
+  top: 40px;
+  right: 8%;
+}
+.ResultPortrait__wageRows {
+  justify-content: center;
+  gap: var(--sp-16);
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  position: relative;
+}
+.ResultPortrait__wageRow {
+  align-items: center;
+  gap: var(--sp-16);
+  flex: 1 1 0;
+  min-height: 48px;
+  max-height: 90px;
+  display: flex;
+  position: relative;
+}
+.ResultPortrait__wageTrack {
+  flex: 1;
+  align-self: stretch;
+  min-width: 0;
+  position: relative;
+}
+.ResultPortrait__barSvg {
+  margin: -8px;
+  display: block;
+}
+.ResultPortrait__wageVal {
+  text-align: right;
+  flex-direction: column;
+  flex: none;
+  align-items: flex-end;
+  gap: 0;
+  width: 140px;
+  display: flex;
+}
+.ResultPortrait__shareBody {
+  flex: 1;
+  min-height: 280px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__shareBody {
+    min-height: 0;
+  }
+}
+.ResultPortrait__shareStat {
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding-left: 6px;
+  display: flex;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.ResultPortrait__shareStatEnd {
+  text-align: right;
+  align-items: flex-end;
+  padding-left: 0;
+  padding-right: 6px;
+  transform: translate(-100%, -50%);
+}
+.ResultPortrait__todayTick {
+  gap: 4px;
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, 8px);
+}
+.ResultPortrait__portrait3 {
+  box-sizing: border-box;
+  background: var(--background-primary);
+  font-variant-numeric: tabular-nums;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__portrait3 {
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    height: 100vh;
+  }
+}
+.ResultPortrait__forecast3 {
+  gap: var(--sp-24);
+  box-sizing: border-box;
+  padding: var(--sp-24) var(--page-margins);
+  flex-direction: column;
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__forecast3 {
+    padding-right: var(--sp-24);
+  }
+}
+.ResultPortrait__sheetPanel {
+  box-sizing: border-box;
+  padding: var(--sp-24);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__sheetPanel {
+    padding-left: 64px;
+  }
+}
+.ResultPortrait__tiles {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  height: 100%;
+  display: grid;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__tiles {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+.ResultPortrait__tile {
+  gap: var(--sp-16);
+  box-sizing: border-box;
+  min-height: 380px;
+  padding: var(--sp-16);
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__tile {
+    min-height: 0;
+  }
+}
+.ResultPortrait__ruleBox {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+.ResultPortrait__tileHead {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-16);
+  display: flex;
+  position: relative;
+}
+.ResultPortrait__tileTitle {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-22, 22px);
+  font-weight: var(--weight-display-regular);
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 1.27273;
+}
+.ResultPortrait__tileStat {
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  display: flex;
+}
+.ResultPortrait__tileStat .ResultPortrait__big {
+  font-size: var(--type-22, 22px);
+}
+.ResultPortrait__forecastAlone {
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+}
+.ResultPortrait__sheetPanelHosted {
+  padding: 0;
+}
+.ResultPortrait__sheetPanelHosted .ResultPortrait__tiles {
+  height: auto;
+}
+@media (min-width: 1024px) {
+  .ResultPortrait__sheetPanelHosted .ResultPortrait__tile {
+    min-height: 380px;
+  }
+}
+.ResultPortrait__facts {
+  margin: var(--sp-16) 0 0;
+  padding-left: 1.1em;
+  list-style: outside;
+}
+.ResultPortrait__facts li {
+  color: var(--foreground-primary);
+  text-wrap: pretty;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+@media (max-width: 700px) {
+  .ResultPortrait__facts li {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.ResultPortrait__facts li p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.ResultPortrait__barRule {
+  z-index: 1;
+  pointer-events: none;
+  background: var(--color-slate-300, #d1cfc5);
+  width: 1px;
+  top: -8px;
+  bottom: -8px;
+  left: calc((100% - 140px - var(--sp-16)) * var(--at, 0));
+  position: absolute;
+}
+.ResultPortrait__priceBase {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: auto 0 0;
+  line-height: 1.45;
+}
+.ResultPortrait__cutNote {
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: 0;
+  line-height: 1.45;
+}
+.ResultPortrait__unempKey + .ResultPortrait__cutNote {
+  margin-top: 6px;
+}
+.ResultPortrait__tileFoot .ResultPortrait__priceBase,
+.ResultPortrait__tileFoot .ResultPortrait__captionSpacer {
+  margin-top: 0;
+}
+.ResultPortrait__captionSpacer {
+  height: 16px;
+  margin-top: auto;
+}
+

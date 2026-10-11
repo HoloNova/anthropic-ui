@@ -1,0 +1,793 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionExplorer__section {
+  padding: 0;
+}
+.SectionExplorer__layout {
+  grid-template-columns: minmax(0, 1fr);
+  align-self: stretch;
+  gap: 40px;
+  width: 100%;
+  display: grid;
+}
+@media (min-width: 1101px) {
+  .SectionExplorer__layout {
+    gap: var(--sp-40);
+    grid-template-columns: minmax(0, 368px) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+.SectionExplorer__rail {
+  gap: var(--sp-24);
+  flex-direction: column;
+  display: flex;
+}
+.SectionExplorer__paperNote {
+  padding: var(--sp-12) 0;
+  border-top: 1px solid var(--color-slate-200);
+  border-bottom: 1px solid var(--color-slate-200);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  line-height: 20px;
+  font-weight: var(--weight-text-regular);
+  margin: 0;
+}
+.SectionExplorer__paperNote a {
+  color: inherit;
+}
+.SectionExplorer__scenario {
+  gap: var(--sp-6);
+  flex-direction: column;
+  display: flex;
+}
+.SectionExplorer__selectWrap {
+  display: block;
+  position: relative;
+}
+.SectionExplorer__selectTrigger {
+  box-sizing: border-box;
+  border: 1px solid var(--color-slate-200);
+  background: var(--color-slate-100);
+  width: 100%;
+  height: 28px;
+  color: var(--foreground-primary);
+  cursor: pointer;
+  appearance: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  border-radius: 96px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  line-height: 20px;
+  display: flex;
+}
+.SectionExplorer__selectTrigger:hover {
+  opacity: 0.85;
+}
+.SectionExplorer__selectTrigger:focus {
+  outline: none;
+}
+.SectionExplorer__selectTrigger:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.SectionExplorer__selectCaret {
+  flex: none;
+  transition: transform 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+  display: block;
+}
+.SectionExplorer__selectTrigger[aria-expanded="true"]
+  .SectionExplorer__selectCaret {
+  transform: rotate(180deg);
+}
+.SectionExplorer__menu {
+  z-index: 5;
+  border: 1px solid var(--color-slate-250);
+  border-radius: var(--br-8);
+  background: var(--color-slate-000);
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 2.5px #00000012;
+}
+.SectionExplorer__menuItem {
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--foreground-primary);
+  cursor: pointer;
+  text-align: left;
+  appearance: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  background: 0 0;
+  border: 0;
+  border-radius: 6px;
+  padding: 4px 12px;
+  line-height: 20px;
+  display: block;
+}
+.SectionExplorer__menuItem:hover {
+  background: var(--color-slate-100);
+}
+.SectionExplorer__menuItem:focus {
+  outline: none;
+}
+.SectionExplorer__menuItem:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: -2px;
+}
+.SectionExplorer__menuItemOn,
+.SectionExplorer__menuItemOn:hover {
+  background: var(--color-slate-200);
+}
+.SectionExplorer__dial {
+  gap: var(--sp-4);
+  flex-direction: column;
+  min-width: 0;
+  display: flex;
+}
+.SectionExplorer__dialNameWrap {
+  align-items: center;
+  min-width: 0;
+  display: flex;
+}
+.SectionExplorer__dialName {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .SectionExplorer__dialName {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionExplorer__dialName p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionExplorer__dialName {
+  color: var(--foreground-primary);
+}
+.SectionExplorer__dialHead {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  position: relative;
+}
+.SectionExplorer__dialVal {
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  margin: 0 0 0 auto;
+  line-height: 20px;
+}
+@media (max-width: 1219px) {
+  .SectionExplorer__dialVal {
+    flex-basis: 100%;
+    margin-left: 0;
+    overflow: hidden;
+  }
+}
+.SectionExplorer__dialValTrack {
+  gap: var(--dial-gap, 0);
+  white-space: nowrap;
+  display: inline-flex;
+}
+.SectionExplorer__dialValCopy {
+  flex: none;
+}
+.SectionExplorer__dialVal[data-over] {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #0000 0,
+    #000 10px calc(100% - 10px),
+    #0000 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #0000 0,
+    #000 10px calc(100% - 10px),
+    #0000 100%
+  );
+}
+.SectionExplorer__dialVal[data-over] .SectionExplorer__dialValTrack {
+  animation: SectionExplorer__dial-loop var(--dial-dur, 5s) linear infinite;
+}
+.SectionExplorer__dialVal[data-over][data-still]
+  .SectionExplorer__dialValTrack {
+  animation-play-state: paused;
+}
+@keyframes SectionExplorer__dial-loop {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--dial-loop, 0px)));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionExplorer__dialVal[data-over] .SectionExplorer__dialValTrack {
+    animation: none;
+  }
+}
+.SectionExplorer__views {
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  display: flex;
+}
+@media (min-width: 1101px) {
+  .SectionExplorer__views {
+    padding-left: var(--sp-40);
+    position: relative;
+  }
+  .SectionExplorer__views:before {
+    content: "";
+    border-left: 1px solid var(--color-slate-350);
+    position: absolute;
+    top: -100vh;
+    bottom: -100vh;
+    left: 0;
+  }
+}
+.SectionExplorer__tabs {
+  flex-wrap: wrap;
+  gap: 6px;
+  display: flex;
+}
+.SectionExplorer__whySlot {
+  min-width: 0;
+  margin-bottom: calc(-1 * var(--sp-12));
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.24s,
+    margin-bottom 0.24s;
+  display: grid;
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionExplorer__whySlot {
+    transition: none;
+  }
+}
+.SectionExplorer__whySlotOpen {
+  grid-template-rows: 1fr;
+  margin-bottom: 0;
+}
+.SectionExplorer__whyInner {
+  min-height: 0;
+  overflow: hidden;
+}
+.SectionExplorer__cutWhy {
+  max-width: 70ch;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-12, 12px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  margin: 0;
+  padding-bottom: 4px;
+  line-height: 1.5;
+}
+.SectionExplorer__tab {
+  border: 1px solid var(--color-slate-200);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  cursor: pointer;
+  appearance: none;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 3px 14px;
+  line-height: 20px;
+}
+.SectionExplorer__tab:hover {
+  opacity: 0.85;
+}
+.SectionExplorer__tabOn {
+  border-color: var(--color-slate-250);
+  background: var(--color-slate-200);
+  color: var(--foreground-primary);
+}
+.SectionExplorer__portrait {
+  border: 1px dashed var(--color-slate-250);
+  min-height: 260px;
+  color: var(--ink-displaced);
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  place-items: center;
+  padding: 56px 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  display: grid;
+}
+.SectionExplorer__retake {
+  box-sizing: border-box;
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--br-8);
+  background: var(--color-slate-100);
+  height: 28px;
+  color: var(--color-slate-700);
+  white-space: nowrap;
+  cursor: pointer;
+  appearance: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px 4px 12px;
+  line-height: 20px;
+  display: inline-flex;
+}
+.SectionExplorer__retake:hover {
+  opacity: 0.85;
+}
+.SectionExplorer__retakeIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.SectionExplorer__ownPanel {
+  padding: var(--sp-16);
+  position: relative;
+}
+.SectionExplorer__ownPanelHead {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0 0 4px;
+}
+@media (max-width: 700px) {
+  .SectionExplorer__ownPanelHead {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionExplorer__ownPanelHead p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionExplorer__ownPanelHead {
+  color: var(--foreground-primary);
+}
+@media (min-width: 992px) {
+  .SectionExplorer__spanFull {
+    grid-column: 1/-1;
+  }
+}
+.SectionExplorer__views [class*="grid"] > *,
+.SectionExplorer__views [class*="grid"] > [class*="grid"] > [class*="panel"],
+.SectionExplorer__views [class*="grid"] > [class*="single"] > [class*="panel"] {
+  height: 100%;
+}
+.SectionExplorer__views [class*="waffle"] {
+  width: 100%;
+}
+.SectionExplorer__railInset {
+  padding-top: 0;
+}
+.SectionExplorer__leftCol {
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+}
+@media (min-width: 1101px) {
+  .SectionExplorer__leftCol {
+    min-height: min(860px, var(--stage-h-safe, 860px) - var(--sp-24) * 2);
+  }
+}
+.SectionExplorer__lineFoot {
+  gap: var(--sp-12);
+  padding-top: var(--sp-24);
+  flex-direction: column;
+  margin-top: auto;
+  display: flex;
+}
+@media (min-width: 1101px) {
+  .SectionExplorer__lineFoot {
+    z-index: 4;
+    background: var(--background-primary);
+    padding-top: var(--sp-12);
+    padding-bottom: var(--sp-12);
+    position: sticky;
+    bottom: 0;
+  }
+  .SectionExplorer__lineFoot:before {
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(#faf9f500, #faf9f5);
+    height: 48px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+.SectionExplorer__yours {
+  color: var(--foreground-tertiary);
+  cursor: pointer;
+  text-underline-offset: 3px;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+  text-decoration: underline;
+}
+.SectionExplorer__yours:hover {
+  color: var(--foreground-primary);
+}
+.SectionExplorer__lineActions {
+  align-items: center;
+  gap: var(--sp-16);
+  flex-wrap: wrap;
+  display: flex;
+}
+.SectionExplorer__heldRow {
+  align-items: center;
+  gap: var(--sp-12);
+  display: flex;
+}
+.SectionExplorer__settingsLabel {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  line-height: 20px;
+}
+.SectionExplorer__advancedToggle {
+  color: var(--foreground-primary);
+  cursor: pointer;
+  text-underline-offset: 3px;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  background: 0 0;
+  border: 0;
+  flex: none;
+  padding: 0;
+  line-height: 20px;
+  text-decoration: underline;
+}
+.SectionExplorer__advancedToggle:hover {
+  color: var(--foreground-tertiary);
+}
+.SectionExplorer__advancedToggle:focus {
+  outline: none;
+}
+.SectionExplorer__advancedToggle:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.SectionExplorer__deck,
+.SectionExplorer__deckLoop {
+  display: contents;
+}
+.SectionExplorer__deckNav {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .SectionExplorer__section {
+    overflow-anchor: none;
+  }
+  .SectionExplorer__rail {
+    gap: var(--sp-16);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+  }
+  .SectionExplorer__heldRow,
+  .SectionExplorer__scenario,
+  .SectionExplorer__paperNote,
+  .SectionExplorer__advancedSlot {
+    grid-column: 1/-1;
+  }
+  .SectionExplorer__lineOnly {
+    display: none;
+  }
+  .SectionExplorer__lineActions {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .SectionExplorer__views {
+    padding-top: var(--sp-16);
+    will-change: transform;
+    position: relative;
+  }
+  .SectionExplorer__views:before {
+    content: "";
+    border-top: 1px solid var(--color-slate-350);
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+  }
+  .SectionExplorer__tabs {
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    margin-inline: -24px;
+    padding-inline: 24px;
+    scroll-padding-inline: 24px;
+    overflow-x: auto;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      #000 calc(100% - 44px),
+      #00000040 100%
+    );
+    mask-image: linear-gradient(90deg, #000 calc(100% - 44px), #00000040 100%);
+  }
+  .SectionExplorer__tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .SectionExplorer__deck {
+    align-items: flex-start;
+    gap: var(--sp-12);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: -24px;
+    padding-inline: 24px;
+    scroll-padding-inline: 24px;
+    display: flex;
+    position: relative;
+    overflow: auto hidden;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      #000 calc(100% - 44px),
+      #00000040 100%
+    );
+    mask-image: linear-gradient(90deg, #000 calc(100% - 44px), #00000040 100%);
+  }
+  .SectionExplorer__deck::-webkit-scrollbar {
+    display: none;
+  }
+  .SectionExplorer__deck > [class*="grid"],
+  .SectionExplorer__deckLoop > [class*="grid"],
+  .SectionExplorer__deck > [class*="sheetPanel"],
+  .SectionExplorer__deckLoop > [class*="sheetPanel"],
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="sheetPanel"]
+    > [class*="tiles"],
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="grid"]
+    > [class*="grid"],
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="grid"]
+    > [class*="single"] {
+    display: contents;
+  }
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > :not([class*="grid"], [class*="sheetPanel"], [class*="deckLoop"]),
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="sheetPanel"]
+    > [class*="tiles"]
+    > *,
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="grid"]
+    > :not([class*="grid"], [class*="single"]),
+  :is(.SectionExplorer__deck, .SectionExplorer__deckLoop)
+    > [class*="grid"]
+    > :is([class*="grid"], [class*="single"])
+    > * {
+    scroll-snap-align: center;
+    flex: 0 0 94%;
+    min-width: 0;
+  }
+  .SectionExplorer__deckStretch {
+    align-items: stretch;
+  }
+  .SectionExplorer__leftColSticky {
+    z-index: 5;
+    padding: var(--sp-12) 24px;
+    background: var(--background-primary);
+    margin-inline: -24px;
+    position: sticky;
+    top: 0;
+  }
+  .SectionExplorer__leftColSticky:after {
+    content: "";
+    border-bottom: 1px solid var(--color-slate-350);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .SectionExplorer__leftColSticky + .SectionExplorer__views:before {
+    display: none;
+  }
+  .SectionExplorer__leftColSticky .SectionExplorer__railClip {
+    max-height: var(--rail-h, 720px);
+    transition: max-height 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .SectionExplorer__leftColSticky .SectionExplorer__railClip:after {
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(#faf9f500, #faf9f5);
+    height: 64px;
+    transition: opacity 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .SectionExplorer__leftColSticky .SectionExplorer__railClipClosed {
+    max-height: 96px;
+  }
+  .SectionExplorer__leftColSticky .SectionExplorer__railClipClosed:after {
+    opacity: 1;
+  }
+  .SectionExplorer__railReveal {
+    z-index: 1;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    inset: 0;
+  }
+  .SectionExplorer__railReveal:focus-visible {
+    outline: 2px solid var(--foreground-primary);
+    outline-offset: -2px;
+  }
+  .SectionExplorer__railToggle {
+    width: 28px;
+    height: 28px;
+    color: var(--foreground-tertiary);
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    margin: -2px -4px 0 auto;
+    padding: 0;
+    display: flex;
+  }
+  .SectionExplorer__railToggle:hover {
+    color: var(--foreground-primary);
+  }
+  .SectionExplorer__railToggle:focus-visible {
+    outline: 2px solid var(--foreground-primary);
+    outline-offset: -2px;
+  }
+  .SectionExplorer__views .SectionExplorer__deck [class*="grid"] > *,
+  .SectionExplorer__views
+    .SectionExplorer__deck
+    [class*="grid"]
+    > [class*="grid"]
+    > [class*="panel"],
+  .SectionExplorer__views
+    .SectionExplorer__deck
+    [class*="grid"]
+    > [class*="single"]
+    > [class*="panel"] {
+    height: auto;
+  }
+  .SectionExplorer__deckNav {
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-16);
+    margin-top: var(--sp-16);
+    display: flex;
+  }
+}
+.SectionExplorer__deckBtn {
+  box-sizing: border-box;
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--br-8);
+  background: var(--color-slate-100);
+  width: 36px;
+  height: 28px;
+  color: var(--foreground-primary);
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: inline-flex;
+}
+.SectionExplorer__deckBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.SectionExplorer__deckBtn:focus-visible {
+  outline: 2px solid var(--foreground-primary);
+  outline-offset: 2px;
+}
+.SectionExplorer__deckIcon {
+  width: 16px;
+  height: 16px;
+}
+.SectionExplorer__deckCount {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 20px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionExplorer__leftColSticky .SectionExplorer__railClip,
+  .SectionExplorer__leftColSticky .SectionExplorer__railClip:after {
+    transition: none;
+  }
+}
+

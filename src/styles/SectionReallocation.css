@@ -1,0 +1,230 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionReallocation__figures {
+  width: 100vw;
+  margin-left: 50%;
+  padding: 28px 0 64px;
+  position: relative;
+  overflow: clip;
+  transform: translate(-50%);
+}
+.SectionReallocation__paper {
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.SectionReallocation__chartTitle {
+  z-index: 1;
+  width: fit-content;
+  padding: 0 var(--sp-24);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-primary);
+  text-align: center;
+  text-wrap: balance;
+  margin: 0 auto 12px;
+  font-weight: 700;
+  line-height: 20px;
+  position: relative;
+}
+.SectionReallocation__toggle {
+  z-index: 1;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  position: relative;
+}
+.SectionReallocation__preset {
+  border: 1px solid var(--color-slate-200);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  cursor: pointer;
+  appearance: none;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 3px 14px;
+  line-height: 20px;
+}
+.SectionReallocation__preset:hover {
+  opacity: 0.85;
+}
+.SectionReallocation__presetOn {
+  border-color: var(--color-slate-250);
+  background: var(--color-slate-200);
+  color: var(--foreground-primary);
+}
+.SectionReallocation__section {
+  padding: 48px var(--page-margins);
+}
+.SectionReallocation__figure {
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .SectionReallocation__figures .SectionReallocation__figure {
+    padding: 0 var(--page-margins);
+  }
+}
+.SectionReallocation__chart {
+  width: 900px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  overflow: visible;
+}
+.SectionReallocation__head2 {
+  letter-spacing: 0.13px;
+  fill: var(--color-slate-500);
+  font-family: var(--anthropic-sans);
+  font-size: var(--type-13, 13px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.SectionReallocation__node {
+  fill: var(--color-slate-500);
+  font-family: var(--anthropic-sans);
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.SectionReallocation__val {
+  fill: var(--foreground-primary);
+  font-family: var(--anthropic-serif);
+  font-size: var(--type-22, 22px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.SectionReallocation__delta {
+  fill: var(--color-slate-500);
+  font-family: var(--anthropic-sans);
+  font-size: var(--type-11, 11px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+.SectionReallocation__flows path {
+  transition: d 0.5s var(--ease-out-quart);
+}
+.SectionReallocation__flows path,
+.SectionReallocation__chart rect,
+.SectionReallocation__chart text {
+  transition: opacity 0.45s;
+}
+.SectionReallocation__dots path {
+  offset-rotate: auto;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  animation-name: SectionReallocation__flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.SectionReallocation__chartWrap[data-still] .SectionReallocation__dots path {
+  animation-play-state: paused;
+}
+@keyframes SectionReallocation__flow {
+  0% {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .SectionReallocation__dots {
+    display: none;
+  }
+}
+.SectionReallocation__chartWrap {
+  width: 100%;
+  display: block;
+}
+.SectionReallocation__calloutHead {
+  font-family: var(--anthropic-mono), monospace;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  line-height: 20px;
+  font-size: var(--type-11, 11px);
+  fill: var(--color-slate-500);
+}
+.SectionReallocation__calloutName {
+  font-size: var(--type-13, 13px);
+  font-weight: 700;
+}
+.SectionReallocation__calloutVal {
+  font-size: var(--type-13, 13px);
+  fill: var(--color-slate-500);
+  font-variant-numeric: tabular-nums;
+}
+.SectionReallocation__spell {
+  z-index: 1;
+  max-width: none;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .SectionReallocation__spell {
+    max-width: 70ch;
+  }
+}
+.SectionReallocation__spell {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  text-align: left;
+  margin: 10px auto 0;
+  font-weight: 400;
+  line-height: 16.5px;
+}
+.SectionReallocation__spell b {
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.SectionReallocation__figure .SectionReallocation__sankeyKey {
+  z-index: 2;
+  width: fit-content;
+  max-width: 100%;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  justify-content: center;
+  gap: var(--sp-8) var(--sp-16);
+  color: var(--color-slate-500);
+  flex-wrap: wrap;
+  margin: 4px auto 0;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  position: relative;
+}
+

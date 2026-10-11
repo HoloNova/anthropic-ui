@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.pi/
+
+# 另一个包管理器的遗留文件；本仓库用 npm（见 README）。
+pnpm-lock.yaml
+pnpm-workspace.yaml

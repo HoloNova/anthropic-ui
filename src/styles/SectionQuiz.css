@@ -1,0 +1,392 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionQuiz__cover {
+  z-index: 1;
+  margin-top: -100vh;
+  position: relative;
+}
+.SectionQuiz__coverFeather {
+  background: linear-gradient(
+    to bottom,
+    #faf9f500,
+    var(--background-primary, #faf9f5)
+  );
+  pointer-events: none;
+  width: 100%;
+  height: 88px;
+}
+.SectionQuiz__section {
+  z-index: 1;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  overflow-anchor: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  padding: 0;
+  position: relative;
+  overflow: clip;
+}
+.SectionQuiz__bounded {
+  border-top: 1px solid var(--color-slate-350);
+  border-bottom: 1px solid var(--color-slate-350);
+}
+.SectionQuiz__stage {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--stage-h-safe, 100vh);
+  padding: clamp(var(--sp-16), 2vw + 2px, var(--sp-24))
+    clamp(var(--sp-24), 4vw - 4px, var(--sp-40));
+  place-items: center;
+  display: grid;
+  position: relative;
+}
+.SectionQuiz__grid {
+  align-self: stretch;
+  gap: 72px var(--sp-40);
+  grid-template-columns: minmax(0, 368px) minmax(0, 1fr);
+  align-items: stretch;
+  width: 100%;
+  display: grid;
+}
+.SectionQuiz__column {
+  align-items: flex-start;
+  gap: var(--sp-32);
+  flex-direction: column;
+  max-width: 368px;
+  display: flex;
+}
+.SectionQuiz__column .SectionQuiz__actions {
+  justify-content: space-between;
+  width: 100%;
+}
+.SectionQuiz__column .SectionQuiz__consentActions {
+  align-items: flex-start;
+  gap: var(--sp-12);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.SectionQuiz__controlSlot {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.SectionQuiz__artColumn {
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--sp-16);
+  flex-direction: column;
+  min-width: 0;
+  display: flex;
+}
+@media (min-width: 1101px) {
+  .SectionQuiz__artColumn {
+    padding-left: var(--sp-40);
+    position: relative;
+  }
+  .SectionQuiz__artColumn:before {
+    content: "";
+    border-left: 1px solid var(--color-slate-350);
+    position: absolute;
+    top: -100vh;
+    bottom: -100vh;
+    left: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .SectionQuiz__artColumn {
+    width: 100%;
+    padding-top: var(--sp-24);
+    position: relative;
+  }
+  .SectionQuiz__artColumn:before {
+    content: "";
+    border-top: 1px solid var(--color-slate-350);
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+  }
+}
+.SectionQuiz__head {
+  gap: var(--sp-6);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.SectionQuiz__eyebrow {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  white-space: nowrap;
+  gap: 12px;
+  margin: 0;
+  line-height: 20px;
+  display: flex;
+}
+.SectionQuiz__category {
+  color: var(--foreground-tertiary);
+}
+.SectionQuiz__count {
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+}
+.SectionQuiz__prompt {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-22, 22px);
+  font-weight: var(--weight-text-regular);
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 1.45455;
+}
+@media (max-width: 700px) {
+  .SectionQuiz__prompt {
+    line-height: 1.5;
+  }
+}
+.SectionQuiz__context {
+  max-width: 46ch;
+  margin: var(--sp-12) 0 0;
+  color: var(--color-slate-500);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .SectionQuiz__context {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionQuiz__context p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionQuiz__actions {
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+.SectionQuiz__primary,
+.SectionQuiz__skip,
+.SectionQuiz__tertiary,
+.SectionQuiz__next {
+  box-sizing: border-box;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 28px;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.SectionQuiz__primary:hover,
+.SectionQuiz__skip:hover,
+.SectionQuiz__tertiary:hover,
+.SectionQuiz__next:hover {
+  opacity: 0.85;
+}
+.SectionQuiz__primary {
+  border-radius: var(--br-6);
+  background: var(--button-primary-background);
+  min-width: 44px;
+  color: var(--button-primary-foreground);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  border: none;
+  gap: 4px;
+  padding: 4px 12px;
+  line-height: 20px;
+}
+.SectionQuiz__skip {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--br-6);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  gap: 4px;
+  padding: 4px 12px;
+  line-height: 20px;
+}
+.SectionQuiz__tertiary,
+.SectionQuiz__next {
+  border-radius: var(--br-8);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  gap: 8px;
+  padding: 4px 16px;
+  line-height: 20px;
+}
+.SectionQuiz__tertiary {
+  border: 1px solid var(--color-slate-200);
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  padding-left: 12px;
+}
+.SectionQuiz__next {
+  background: var(--button-primary-background);
+  color: var(--button-primary-foreground);
+  border: none;
+  padding-right: 12px;
+}
+.SectionQuiz__icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.SectionQuiz__introStage {
+  place-items: center;
+  display: grid;
+  position: absolute;
+  inset: 0;
+}
+.SectionQuiz__centred {
+  box-sizing: border-box;
+  align-items: center;
+  gap: var(--sp-24);
+  text-align: center;
+  width: 100%;
+  padding: 0 var(--page-margins, 24px);
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .SectionQuiz__centred {
+    gap: var(--sp-12);
+    padding: 0 24px;
+  }
+}
+.SectionQuiz__title {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  max-width: 21ch;
+  font-size: clamp(32px, 6.4vw, 61px);
+  font-weight: var(--weight-display-regular);
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+.SectionQuiz__standfirst {
+  max-width: 58ch;
+  color: var(--foreground-tertiary);
+  text-align: left;
+  text-wrap: pretty;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .SectionQuiz__standfirst {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionQuiz__standfirst p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionQuiz__centred .SectionQuiz__actions {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 1100px) {
+  .SectionQuiz__grid {
+    gap: clamp(var(--sp-16), 6vw - 26px, 40px);
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    align-items: start;
+  }
+  .SectionQuiz__column {
+    max-width: none;
+  }
+}
+@media (max-width: 700px) {
+  .SectionQuiz__column {
+    z-index: 5;
+    gap: var(--sp-12);
+    padding: var(--sp-12) 24px;
+    background: var(--background-primary);
+    margin-inline: -24px;
+    position: sticky;
+    top: 0;
+  }
+  .SectionQuiz__column:after {
+    content: "";
+    border-bottom: 1px solid var(--color-slate-350);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .SectionQuiz__column .SectionQuiz__actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .SectionQuiz__artColumn {
+    padding-top: var(--sp-16);
+    pointer-events: none;
+  }
+  .SectionQuiz__artColumn:before {
+    display: none;
+  }
+}
+.SectionQuiz__resultLeft .SectionQuiz__actions {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.SectionQuiz__explorerInStage {
+  place-self: stretch stretch;
+  width: 100%;
+}
+

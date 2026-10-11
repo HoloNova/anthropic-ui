@@ -1,0 +1,87 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.UnemploymentSlope__wrap {
+  --slope-exposed: var(--ink-exposed);
+  --slope-other: var(--ink-other);
+  --slope-all: var(--color-slate-500);
+  flex-direction: column;
+  gap: 6px;
+  display: flex;
+}
+.UnemploymentSlope__svg {
+  display: block;
+  overflow: visible;
+}
+.UnemploymentSlope__year {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  fill: var(--foreground-primary);
+  font-weight: 400;
+}
+.UnemploymentSlope__tick {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  fill: var(--color-slate-500);
+  font-variant-numeric: tabular-nums;
+}
+.UnemploymentSlope__valExposed,
+.UnemploymentSlope__valOther {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.UnemploymentSlope__valExposed {
+  fill: var(--slope-exposed);
+}
+.UnemploymentSlope__valOther {
+  fill: var(--slope-other);
+}
+.UnemploymentSlope__key {
+  gap: var(--sp-8) var(--sp-16);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  color: var(--color-slate-500);
+  flex-wrap: wrap;
+  margin: 0;
+  display: flex;
+}
+.UnemploymentSlope__keyExposed:before,
+.UnemploymentSlope__keyOther:before,
+.UnemploymentSlope__keyAll:before {
+  content: "";
+  vertical-align: middle;
+  width: 10px;
+  height: 2px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.UnemploymentSlope__keyExposed:before {
+  background: var(--slope-exposed);
+}
+.UnemploymentSlope__keyOther:before {
+  background: var(--slope-other);
+}
+.UnemploymentSlope__keyAll:before {
+  border-top: 2px dashed var(--slope-all);
+  height: 0;
+}
+

@@ -1,0 +1,5 @@
+/* 恢复自 /_next/static/chunks/2gepcixj9k_19.css；只去掉类名构建哈希，并改用本地字体。
+   原站没有独立的 Serif 字体族，这里补一条等宽之外的通用衬线兜底。 */
+.anthropicserif_e7e46c4-module__uImRTq__variable {
+  --anthropic-serif: "anthropicSerif", "anthropicSerif Fallback", ui-serif, Georgia, serif;
+}

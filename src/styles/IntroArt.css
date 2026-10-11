@@ -1,0 +1,30 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.IntroArt__art {
+  pointer-events: none;
+  --dash: 1;
+  position: absolute;
+  overflow: visible;
+}
+.IntroArt__drawn {
+  --dash: 0;
+}
+.IntroArt__settled {
+  --draw-prop: none;
+}
+.IntroArt__cell {
+  stroke-dasharray: 1;
+}
+.IntroArt__sline {
+  stroke-dashoffset: var(--dash, 0);
+  transition-property: var(--draw-prop, stroke-dashoffset);
+  transition-duration: 0.24s;
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: calc(var(--fd, 0s) + var(--dd, 0s));
+}
+@media (prefers-reduced-motion: reduce) {
+  .IntroArt__sline {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
+

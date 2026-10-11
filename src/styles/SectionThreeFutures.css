@@ -1,0 +1,163 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionThreeFutures__section {
+  z-index: 1;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  --chart-rule: #87867f;
+  --chart-ink: #141413;
+  --c-slow: #6a9bcc;
+  --c-central: #788c5d;
+  --c-fast: #c46686;
+  --c-slow-tint: #c4d9ea;
+  --c-central-tint: #b3c1a0;
+  --c-fast-tint: #e2b6c4;
+  padding: 48px 0;
+  line-height: 1.5;
+  position: relative;
+}
+.SectionThreeFutures__intro {
+  max-width: 640px;
+  padding: 0 var(--sp-24);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0 auto;
+}
+@media (max-width: 700px) {
+  .SectionThreeFutures__intro {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionThreeFutures__intro p {
+  font-size: inherit;
+  margin: 0;
+}
+.SectionThreeFutures__scrolly {
+  position: relative;
+}
+.SectionThreeFutures__sticky {
+  place-items: center;
+  height: 100vh;
+  display: grid;
+  position: sticky;
+  top: 0;
+  overflow: clip;
+}
+.SectionThreeFutures__stage {
+  grid-area: 1/1;
+  width: 100%;
+  height: 100vh;
+}
+.SectionThreeFutures__beats {
+  z-index: 2;
+  margin-top: -56vh;
+  position: relative;
+}
+.SectionThreeFutures__beatSlot {
+  min-height: 112vh;
+  padding: 0 var(--page-margins);
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.SectionThreeFutures__beatTail {
+  height: 170vh;
+}
+.SectionThreeFutures__card {
+  text-wrap: pretty;
+}
+@media (max-width: 700px) {
+  .SectionThreeFutures__card {
+    text-wrap: auto;
+  }
+}
+.SectionThreeFutures__card {
+  border: 1px solid var(--color-slate-350);
+  border-radius: var(--br-8);
+  background: var(--color-slate-100);
+  width: min(416px, 100%);
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .SectionThreeFutures__card {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionThreeFutures__card p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionThreeFutures__card {
+  padding: var(--sp-16);
+  box-shadow: 0 4px 24px #0000000d;
+}
+.SectionThreeFutures__card p {
+  margin: 0;
+}
+.SectionThreeFutures__card p + p,
+.SectionThreeFutures__card h2 + p,
+.SectionThreeFutures__card h3 + p {
+  margin-top: var(--sp-16);
+}
+@media (max-width: 700px) {
+  .SectionThreeFutures__card p + p,
+  .SectionThreeFutures__card h2 + p,
+  .SectionThreeFutures__card h3 + p {
+    margin-top: var(--sp-12);
+  }
+}
+.SectionThreeFutures__card h2,
+.SectionThreeFutures__card h3,
+.SectionThreeFutures__card .SectionThreeFutures__lead {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-weight: var(--weight-display-bold);
+  font-size: var(--body-2, 17px);
+  line-height: var(--leading-155);
+  margin: 0;
+}
+.SectionThreeFutures__card strong,
+.SectionThreeFutures__card b {
+  font-weight: inherit;
+}
+.SectionThreeFutures__scenarioWord {
+  white-space: nowrap;
+  position: relative;
+}
+.SectionThreeFutures__scenarioUnderline {
+  pointer-events: none;
+  position: absolute;
+  bottom: -10px;
+  left: -6px;
+}
+.SectionThreeFutures__underlineSvg {
+  display: block;
+}
+

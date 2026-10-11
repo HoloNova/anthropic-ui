@@ -1,0 +1,50 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.ChartKey__key {
+  gap: var(--sp-8) var(--sp-16);
+  flex-wrap: nowrap;
+  margin: 8px 0 0;
+  display: flex;
+}
+@media (max-width: 700px) {
+  .ChartKey__key {
+    flex-wrap: wrap;
+  }
+}
+.ChartKey__key {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  color: var(--color-slate-500);
+  line-height: 1.4;
+}
+.ChartKey__item {
+  white-space: nowrap;
+  align-items: center;
+  gap: 6px;
+  display: inline-flex;
+}
+.ChartKey__note {
+  color: var(--color-slate-400);
+  font-style: italic;
+}
+.ChartKey__sizePair {
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
+}
+.ChartKey__stacked {
+  align-items: flex-start;
+  gap: var(--sp-8) var(--sp-16);
+  flex-direction: column;
+  margin: 0;
+}
+.ChartKey__title {
+  color: var(--foreground-primary);
+  white-space: nowrap;
+  flex: none;
+  margin-bottom: 2px;
+}
+

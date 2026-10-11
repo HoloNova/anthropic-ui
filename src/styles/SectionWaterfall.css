@@ -1,0 +1,25 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionWaterfall__section {
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  position: relative;
+  overflow-x: clip;
+}
+.SectionWaterfall__chart {
+  height: 140svh;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .SectionWaterfall__chart {
+    height: 125svh;
+  }
+}
+.SectionWaterfall__svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+

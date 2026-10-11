@@ -1,0 +1,390 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.TaskField__root {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  transform: translateY(var(--stage-lift, 0));
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  display: flex;
+  position: relative;
+}
+.TaskField__root[data-lifted] .TaskField__jobtag {
+  opacity: 0;
+}
+.TaskField__root[data-lifted] .TaskField__legend {
+  margin-top: 0;
+}
+.TaskField__jobtag {
+  z-index: 2;
+  width: min(598px, 100%);
+  margin-bottom: 24px;
+  position: relative;
+  transform: none;
+}
+@media (min-width: 1024px) {
+  .TaskField__jobtag {
+    transform: translateY(var(--tag-drop, 0));
+  }
+}
+.TaskField__jobtag {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-primary);
+  text-align: center;
+  font-weight: 700;
+  line-height: 20px;
+  transition: opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.TaskField__jobtagOff {
+  opacity: 0;
+}
+.TaskField__wrap {
+  width: 624px;
+  height: 624px;
+  margin-top: calc(624px * (var(--bundle-scale, 1) - 1) / 2);
+  margin-bottom: calc(
+    156px * var(--bundle-scale, 1) +
+      calc(624px * (var(--bundle-scale, 1) - 1) / 2)
+  );
+  transform: translateY(var(--drawing-drop, 0)) scale(var(--field-scale, 0.5));
+  transform-origin: 50%;
+  position: relative;
+}
+.TaskField__wrap[data-ready] {
+  transition: transform 0.9s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.TaskField__wrapZoomed {
+  transform: translateY(var(--drawing-drop, 0)) scale(var(--bundle-scale, 1));
+}
+.TaskField__wrapGlyph {
+  transform: translateY(var(--drawing-drop, 0))
+    scale(var(--glyph-scale, var(--bundle-scale, 1)));
+}
+.TaskField__paperLayer {
+  transform: scale(calc(1 / var(--field-scale, 0.5)))
+    translateY(var(--centre-nudge, 0));
+  transform-origin: 50%;
+  opacity: 0;
+  transition:
+    opacity 0.9s cubic-bezier(0.32, 0.72, 0, 1),
+    transform 0.9s cubic-bezier(0.32, 0.72, 0, 1);
+  position: absolute;
+  inset: 0;
+}
+.TaskField__wrapZoomed .TaskField__paperLayer {
+  transform: translateY(var(--centre-nudge, 0));
+}
+.TaskField__paperOn {
+  opacity: 1;
+}
+.TaskField__paper {
+  display: block;
+  position: absolute;
+  overflow: visible;
+}
+.TaskField__field {
+  grid-template-rows: repeat(16, 156px);
+  grid-template-columns: repeat(26, 156px);
+  gap: 0;
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 700px) {
+  .TaskField__wrapZoomed:not(.TaskField__wrapGlyph) .TaskField__task {
+    --breathe: calc(var(--br, 0) * 26px);
+  }
+}
+.TaskField__fillerField {
+  --dash: 1;
+  display: block;
+  position: absolute;
+  overflow: visible;
+}
+.TaskField__fillerFieldDrawn {
+  --dash: 0;
+}
+.TaskField__fillerUse {
+  opacity: 1;
+  transition: opacity 0.38s cubic-bezier(0.32, 0.72, 0, 1) var(--ring-delay, 0s);
+}
+.TaskField__fillerFieldOff .TaskField__fillerUse {
+  opacity: 0;
+}
+.TaskField__task {
+  transform: translate(
+    var(--gx, 0),
+    calc(var(--gy, 0px) + var(--breathe, 0px))
+  );
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.62s cubic-bezier(0.32, 0.72, 0, 1);
+  display: flex;
+}
+.TaskField__isIn,
+.TaskField__isHidden {
+  transform: translate(
+    var(--gx, 0),
+    calc(var(--gy, 0px) + var(--breathe, 0px))
+  );
+}
+.TaskField__glyph .TaskField__isIn {
+  transform: translate(
+      var(--gx, 0),
+      calc(var(--gy, 0px) + var(--glyph-nudge, 0px))
+    )
+    scale(1);
+}
+.TaskField__extra {
+  width: 52px;
+  height: 52px;
+  transform: translateY(var(--glyph-nudge, 0));
+  opacity: 0;
+  transition: opacity 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+  position: absolute;
+}
+.TaskField__extraOn {
+  opacity: 1;
+}
+.TaskField__sq {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 4px;
+  position: relative;
+}
+.TaskField__defs {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.TaskField__mark {
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  inset: -20%;
+  overflow: visible;
+}
+.TaskField__inkLayer {
+  transition: none;
+}
+.TaskField__sline {
+  clip-path: inset(0 calc(var(--dash, 0) * 100%) 0 0);
+  transition-property: var(--draw-prop, clip-path);
+  transition-duration: 0.24s;
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: calc(var(--fd, 0s) + var(--dd, 0s));
+}
+.TaskField__fillerFieldSettled {
+  --draw-prop: none;
+}
+.TaskField__task .TaskField__sline {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--te, 0s) + var(--de, 0s));
+}
+.TaskField__isIn .TaskField__sline {
+  clip-path: inset(0);
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--td, 0s) + var(--dd, 0s));
+}
+.TaskField__inkLayer[data-ink="takes"] .TaskField__sline {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--te, 0s) + var(--de, 0s));
+}
+.TaskField__isInked .TaskField__inkLayer[data-ink="takes"] .TaskField__sline {
+  clip-path: inset(0);
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--td, 0s) + var(--dd, 0s));
+}
+.TaskField__inkLayer[data-ink="neutral"] .TaskField__sline {
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--te, 0s) + var(--de, 0s));
+}
+.TaskField__wideField .TaskField__sline {
+  clip-path: inset(0 calc(var(--dash, 0) * 100%) 0 0);
+  transition-property: var(--draw-prop, clip-path);
+  transition-duration: 0.24s;
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: calc(var(--fd, 0s) + var(--dd, 0s));
+}
+.TaskField__wideField {
+  --dash: 1;
+}
+.TaskField__wideFieldDrawn {
+  --dash: 0;
+}
+.TaskField__wideFieldSettled {
+  --draw-prop: none;
+}
+.TaskField__isIn .TaskField__inkLayer[data-ink="neutral"] .TaskField__sline {
+  clip-path: inset(0);
+  transition: clip-path 0.24s cubic-bezier(0.33, 1, 0.68, 1)
+    calc(var(--td, 0s) + var(--dd, 0s));
+}
+.TaskField__isPriced,
+.TaskField__isAug,
+.TaskField__isAuto,
+.TaskField__isFresh,
+.TaskField__isDrained,
+.TaskField__glyph {
+  --state: 1;
+}
+.TaskField__label {
+  --label-boost: max(
+    1,
+    calc(max(var(--width-scale, 1), 0.846) / var(--bundle-scale, 1))
+  );
+  max-width: calc(19ch / var(--label-boost));
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--foreground-tertiary);
+  transform: translateY(var(--label-drop, 0)) scale(var(--label-boost));
+  transform-origin: 50% 0;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 20px;
+  transition:
+    opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1),
+    transform 0.76s cubic-bezier(0.32, 0.72, 0, 1);
+  display: flex;
+}
+.TaskField__task .TaskField__gline {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.56s cubic-bezier(0.33, 1, 0.68, 1) var(--gd, 0s);
+}
+.TaskField__isInst .TaskField__gline {
+  clip-path: inset(0);
+}
+.TaskField__task .TaskField__dline {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.56s cubic-bezier(0.33, 1, 0.68, 1) var(--gd, 0s);
+}
+.TaskField__isInst .TaskField__dline {
+  clip-path: inset(0);
+}
+.TaskField__isDrained .TaskField__dline {
+  clip-path: inset(0 0 0 100%);
+  transition: clip-path 0.56s cubic-bezier(0.33, 1, 0.68, 1) var(--rd, 0s);
+}
+.TaskField__task .TaskField__rline {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.56s cubic-bezier(0.33, 1, 0.68, 1) var(--rd, 0s);
+}
+.TaskField__isDrained .TaskField__rline {
+  clip-path: inset(0);
+}
+.TaskField__isInst .TaskField__inkLayer[data-ink="neutral"],
+.TaskField__isInst .TaskField__inkLayer[data-ink="takes"] {
+  transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1) 0.1s;
+}
+.TaskField__isInst .TaskField__label {
+  --label-drop: calc(52px * (var(--inst-scale, 2) - 1) / 2);
+}
+.TaskField__labelsOff .TaskField__label,
+.TaskField__isHidden .TaskField__label {
+  opacity: 0;
+}
+.TaskField__legend {
+  z-index: 2;
+  justify-content: center;
+  gap: var(--sp-8) var(--sp-16);
+  transform: translateY(var(--drawing-drop, 0));
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--color-slate-500);
+  opacity: 0;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 20px;
+  list-style: none;
+  transition: opacity 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  display: flex;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .TaskField__legend {
+    max-width: calc(100vw - 32px);
+    font-size: var(--type-11, 11px);
+    margin-top: 128px;
+  }
+}
+.TaskField__legendOn {
+  opacity: 1;
+}
+.TaskField__legendItem {
+  align-items: center;
+  gap: 7px;
+  display: inline-flex;
+}
+.TaskField__chip {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.TaskField__chipMark {
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  inset: -20%;
+  overflow: visible;
+}
+@media (prefers-reduced-motion: reduce) {
+  .TaskField__task,
+  .TaskField__sq,
+  .TaskField__label,
+  .TaskField__legend,
+  .TaskField__wrap,
+  .TaskField__filler,
+  .TaskField__inkLayer,
+  .TaskField__jobtag,
+  .TaskField__extra,
+  .TaskField__inkLayer[data-ink="takes"] .TaskField__sline,
+  .TaskField__inkLayer[data-ink="neutral"] .TaskField__sline,
+  .TaskField__isIn .TaskField__inkLayer[data-ink="neutral"] .TaskField__sline,
+  .TaskField__sline,
+  .TaskField__task .TaskField__sline,
+  .TaskField__isIn .TaskField__sline,
+  .TaskField__wideField .TaskField__sline,
+  .TaskField__fillerUse,
+  .TaskField__task .TaskField__gline,
+  .TaskField__isInst .TaskField__gline,
+  .TaskField__task .TaskField__dline,
+  .TaskField__isInst .TaskField__dline,
+  .TaskField__isDrained .TaskField__dline,
+  .TaskField__task .TaskField__rline,
+  .TaskField__isDrained .TaskField__rline {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
+

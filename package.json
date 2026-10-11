@@ -1,0 +1,30 @@
+{
+  "name": "anthropic-economic-scenarios-study",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Readable source for the Anthropic Economic Scenarios explorer",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:origin": "vite --host 127.0.0.1 --open /origin/",
+    "dev:lab": "vite --host 127.0.0.1 --open /component/",
+    "build": "node scripts/build-lab-md.mjs && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "verify": "node scripts/verify.mjs",
+    "lab:smoke": "node scripts/lab-smoke.mjs",
+    "lab:md": "node scripts/build-lab-md.mjs",
+    "lab:check": "node scripts/build-lab-md.mjs --check && node scripts/lab-data-check.mjs"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.20",
+    "gsap": "^3.15.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@babel/parser": "^8.0.6",
+    "@babel/traverse": "^8.0.6",
+    "esbuild": "^0.28.2",
+    "vite": "^7.3.0"
+  }
+}

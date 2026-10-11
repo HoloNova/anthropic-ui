@@ -1,0 +1,54 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.ShareStrokes__barLine {
+  --stroke-labour: var(--ink-labour);
+  --stroke-capital: var(--ink-capital);
+  --stroke-moved: var(--ink-moved);
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+.ShareStrokes__outlined {
+  outline: 2px dashed var(--color-slate-350);
+  outline-offset: 6px;
+}
+.ShareStrokes__track {
+  flex: auto;
+  min-width: 0;
+  display: block;
+  position: relative;
+}
+.ShareStrokes__bar {
+  display: block;
+  overflow: visible;
+}
+@media (min-width: 1024px) {
+  .ShareStrokes__bar,
+  .ShareStrokes__sizeBarEnd {
+    margin-left: var(--anchor-inset, 0);
+  }
+}
+.ShareStrokes__size {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-11, 11px);
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ShareStrokes__sizeUp {
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+}
+.ShareStrokes__sizeBarEnd {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+

@@ -1,0 +1,22 @@
+// 原 CSS Modules 的类名映射，去掉构建哈希以便阅读。
+export default {
+  axis: "BeliefSwarm__axis",
+  chartTitle: "BeliefSwarm__chartTitle",
+  count: "BeliefSwarm__count",
+  key: "BeliefSwarm__key",
+  keyItem: "BeliefSwarm__keyItem",
+  lane: "BeliefSwarm__lane",
+  laneChart: "BeliefSwarm__laneChart",
+  laneDesc: "BeliefSwarm__laneDesc",
+  laneLabel: "BeliefSwarm__laneLabel",
+  laneTitle: "BeliefSwarm__laneTitle",
+  lanes: "BeliefSwarm__lanes",
+  mark: "BeliefSwarm__mark",
+  markOn: "BeliefSwarm__markOn",
+  marks: "BeliefSwarm__marks",
+  rail: "BeliefSwarm__rail",
+  swarm: "BeliefSwarm__swarm",
+  swatchSvg: "BeliefSwarm__swatchSvg",
+  tick: "BeliefSwarm__tick",
+  youVal: "BeliefSwarm__youVal",
+};

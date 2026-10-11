@@ -1,0 +1,6 @@
+/* 恢复自 /_next/static/chunks/2gepcixj9k_19.css；只去掉类名构建哈希，并改用本地字体。
+   字体栈照抄 claude.dev 的 --sans，含 Roboto 那一档 fallback。 */
+.anthropicsans_dce02d96-module__tEBbKW__variable {
+  --anthropic-sans: "anthropicSans", "anthropicSans Fallback", "anthropicSans Fallback Roboto",
+    -apple-system, "Helvetica Neue", sans-serif;
+}

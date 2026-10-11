@@ -1,0 +1,74 @@
+/* 恢复自 /_next/static/chunks/2fv0wn39c-r51.css；只去掉类名构建哈希，并改用本地字体。 */
+.FindingHead__section {
+  z-index: 1;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  justify-content: center;
+  padding: 48px 24px;
+  display: flex;
+  position: relative;
+}
+.FindingHead__flushTop {
+  padding-top: 0;
+}
+.FindingHead__head {
+  width: 100%;
+  max-width: 640px;
+}
+.FindingHead__title {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-22, 22px);
+  font-weight: var(--weight-text-regular);
+  letter-spacing: 0;
+  line-height: 1.45455;
+}
+@media (max-width: 700px) {
+  .FindingHead__title {
+    line-height: 1.5;
+  }
+}
+.FindingHead__title {
+  margin: 0 0 var(--sp-24);
+  color: var(--foreground-primary);
+  text-wrap: pretty;
+}
+.FindingHead__eyebrow {
+  color: var(--color-slate-500);
+  display: block;
+}
+.FindingHead__standfirst {
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .FindingHead__standfirst {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.FindingHead__standfirst p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.FindingHead__standfirst {
+  color: var(--foreground-primary);
+  margin: 0;
+}
+.FindingHead__standfirst p {
+  margin: 0 0 var(--sp-24);
+}
+.FindingHead__standfirst p:last-child {
+  margin-bottom: 0;
+}
+

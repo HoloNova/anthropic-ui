@@ -1,0 +1,194 @@
+/* 恢复自 /_next/static/chunks/2gepcixj9k_19.css；只去掉类名构建哈希，并改用本地字体。
+   字体族名沿用本地的 anthropicSans / anthropicSerif / anthropicMono，
+   但权重范围、fallback 的 local() 列表与度量覆盖全部照抄 claude.dev 的原站声明 ——
+   fallback 是否指向等宽字体直接决定 ░ ▒ ▓ 这类块元素字符由谁渲染。 */
+
+@font-face {
+  font-family: anthropicSans;
+  src: url("/assets/fonts/AnthropicSans_Roman_Web-s.p.1e3n6bt4oqimz.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: anthropicSans;
+  src: url("/assets/fonts/AnthropicSans_Italic_Web-s.p.212cqpul8-axk.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: anthropicSans Fallback;
+  src: local(Arial), local(ArialMT), local(Liberation Sans), local(LiberationSans);
+  font-weight: 300 500;
+  ascent-override: 95.2%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 104%;
+}
+@font-face {
+  font-family: anthropicSans Fallback;
+  src: local(Arial Bold), local(Arial-BoldMT), local(Liberation Sans Bold),
+    local(LiberationSans-Bold);
+  font-weight: 600 800;
+  ascent-override: 99.75%;
+  descent-override: 26.2%;
+  line-gap-override: 0%;
+  size-adjust: 99.24%;
+}
+@font-face {
+  font-family: anthropicSans Fallback;
+  src: local(Arial Italic), local(Arial-ItalicMT), local(Liberation Sans Italic),
+    local(LiberationSans-Italic);
+  font-weight: 300 500;
+  font-style: italic;
+  ascent-override: 95.2%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 104%;
+}
+@font-face {
+  font-family: anthropicSans Fallback;
+  src: local(Arial Bold Italic), local(Arial-BoldItalicMT),
+    local(Liberation Sans Bold Italic), local(LiberationSans-BoldItalic);
+  font-weight: 600 800;
+  font-style: italic;
+  ascent-override: 99.78%;
+  descent-override: 26.2%;
+  line-gap-override: 0%;
+  size-adjust: 99.22%;
+}
+@font-face {
+  font-family: anthropicSans Fallback Roboto;
+  src: local(Roboto), local(Roboto Regular), local(Roboto-Regular);
+  font-weight: 300 500;
+  ascent-override: 95.23%;
+  descent-override: 25.01%;
+  line-gap-override: 0%;
+  size-adjust: 103.96%;
+}
+@font-face {
+  font-family: anthropicSans Fallback Roboto;
+  src: local(Roboto Bold), local(Roboto-Bold);
+  font-weight: 600 800;
+  ascent-override: 93.69%;
+  descent-override: 24.61%;
+  line-gap-override: 0%;
+  size-adjust: 105.67%;
+}
+@font-face {
+  font-family: anthropicSans Fallback Roboto;
+  src: local(Roboto Italic), local(Roboto-Italic);
+  font-weight: 300 500;
+  font-style: italic;
+  ascent-override: 92.53%;
+  descent-override: 24.3%;
+  line-gap-override: 0%;
+  size-adjust: 106.99%;
+}
+@font-face {
+  font-family: anthropicSans Fallback Roboto;
+  src: local(Roboto Bold Italic), local(Roboto-BoldItalic);
+  font-weight: 600 800;
+  font-style: italic;
+  ascent-override: 91.06%;
+  descent-override: 23.91%;
+  line-gap-override: 0%;
+  size-adjust: 108.72%;
+}
+
+@font-face {
+  font-family: anthropicSerif;
+  src: url("/assets/fonts/AnthropicSerif_Roman_Web-s.p.0twp0vwi-lncj.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: anthropicSerif;
+  src: url("/assets/fonts/AnthropicSerif_Italic_Web-s.p.1fjksu1uimpf3.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: anthropicSerif Fallback;
+  src: local(Arial);
+  ascent-override: 96.05%;
+  descent-override: 24.92%;
+  line-gap-override: 0%;
+  size-adjust: 103.33%;
+}
+
+@font-face {
+  font-family: anthropicMono;
+  src: url("/assets/fonts/AnthropicMono_Roman_Web-s.p.16xhthj2n-pap.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: anthropicMono;
+  src: url("/assets/fonts/AnthropicMono_Italic_Web-s.p.0x1wr-4z1xgw3.woff2")
+    format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: italic;
+}
+/* Anthropic Mono 里没有 U+2591–U+2593（░ ▒ ▓），这些字符由这里定义的等宽字体渲染。
+   原站指向 Menlo / DejaVu Sans Mono / Liberation Mono / Courier New，
+   Windows 上落到 Courier New（advance 0.60em，块元素满格），所以进度条能连成一条。
+   早先这里指向 local(Arial) 且 size-adjust 131.49%，块元素既不满格又被放大，才出现一格一格。 */
+@font-face {
+  font-family: anthropicMono Fallback;
+  src: local(Menlo Regular), local(Menlo-Regular), local(DejaVu Sans Mono),
+    local(DejaVuSansMono), local(Droid Sans Mono), local(DroidSansMono),
+    local(Liberation Mono), local(LiberationMono), local(Courier New),
+    local(CourierNewPSMT);
+  font-weight: 300 500;
+  ascent-override: 99%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+  size-adjust: 99.8%;
+}
+@font-face {
+  font-family: anthropicMono Fallback;
+  src: local(Menlo Bold), local(Menlo-Bold), local(DejaVu Sans Mono Bold),
+    local(DejaVuSansMono-Bold), local(Liberation Mono Bold), local(LiberationMono-Bold),
+    local(Courier New Bold), local(CourierNewPS-BoldMT);
+  font-weight: 600 800;
+  ascent-override: 99%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+  size-adjust: 99.8%;
+}
+@font-face {
+  font-family: anthropicMono Fallback;
+  src: local(Menlo Italic), local(Menlo-Italic), local(DejaVu Sans Mono Oblique),
+    local(DejaVuSansMono-Oblique), local(Liberation Mono Italic),
+    local(LiberationMono-Italic), local(Courier New Italic), local(CourierNewPS-ItalicMT);
+  font-weight: 300 500;
+  font-style: italic;
+  ascent-override: 99%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+  size-adjust: 99.8%;
+}
+@font-face {
+  font-family: anthropicMono Fallback;
+  src: local(Menlo Bold Italic), local(Menlo-BoldItalic),
+    local(DejaVu Sans Mono Bold Oblique), local(DejaVuSansMono-BoldOblique),
+    local(Liberation Mono Bold Italic), local(LiberationMono-BoldItalic),
+    local(Courier New Bold Italic), local(CourierNewPS-BoldItalicMT);
+  font-weight: 600 800;
+  font-style: italic;
+  ascent-override: 99%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+  size-adjust: 99.8%;
+}

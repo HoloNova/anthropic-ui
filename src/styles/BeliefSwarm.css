@@ -1,0 +1,195 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.BeliefSwarm__swarm {
+  gap: var(--sp-12);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.BeliefSwarm__chartTitle {
+  z-index: 1;
+  width: fit-content;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-primary);
+  text-align: center;
+  text-wrap: balance;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 20px;
+  position: relative;
+}
+.BeliefSwarm__key {
+  width: fit-content;
+  margin: var(--sp-12) auto 0;
+  justify-content: center;
+  gap: var(--sp-8) var(--sp-16);
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.BeliefSwarm__keyItem {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--color-slate-500);
+  align-items: center;
+  gap: 8px;
+  line-height: 20px;
+  display: inline-flex;
+}
+.BeliefSwarm__swatchSvg {
+  flex: none;
+  display: block;
+  overflow: visible;
+}
+.BeliefSwarm__count {
+  font-variant-numeric: tabular-nums;
+}
+.BeliefSwarm__lanes {
+  flex-direction: column;
+  gap: 52px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.BeliefSwarm__lane {
+  align-items: center;
+  gap: var(--sp-16);
+  grid-template-columns: 1fr;
+  display: grid;
+}
+@media (max-width: 1219px) {
+  .BeliefSwarm__lane {
+    gap: 26px;
+  }
+}
+@media (min-width: 1220px) {
+  .BeliefSwarm__lane {
+    grid-template-columns: 305px minmax(0, 1fr);
+    gap: 26px;
+  }
+}
+.BeliefSwarm__laneLabel {
+  flex-direction: column;
+  gap: 2px;
+  width: 273px;
+  max-width: 100%;
+  display: flex;
+}
+@media (min-width: 1220px) {
+  .BeliefSwarm__laneLabel {
+    justify-content: center;
+    align-self: start;
+    height: 76px;
+    margin-top: -12px;
+  }
+}
+@media (max-width: 1219px) {
+  .BeliefSwarm__laneLabel {
+    justify-content: center;
+    height: 74px;
+    margin: 15px 0;
+  }
+}
+.BeliefSwarm__laneChart {
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  display: flex;
+  position: relative;
+}
+.BeliefSwarm__laneTitle {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .BeliefSwarm__laneTitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.BeliefSwarm__laneTitle p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.BeliefSwarm__laneDesc {
+  color: var(--foreground-tertiary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  line-height: 20px;
+}
+.BeliefSwarm__youVal {
+  color: var(--foreground-primary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  line-height: 20px;
+  font-size: var(--type-11, 11px);
+  line-height: 16px;
+  position: absolute;
+  top: -18px;
+}
+@media (max-width: 700px) {
+  .BeliefSwarm__youVal {
+    display: none;
+  }
+}
+.BeliefSwarm__rail {
+  width: 100%;
+  display: block;
+  overflow: visible;
+}
+.BeliefSwarm__axis {
+  height: 26px;
+  position: relative;
+}
+.BeliefSwarm__tick {
+  color: var(--color-slate-500);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  line-height: 20px;
+  font-size: var(--type-11, 11px);
+  line-height: 16px;
+  position: absolute;
+  top: 0;
+}
+

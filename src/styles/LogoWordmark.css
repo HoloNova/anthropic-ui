@@ -1,0 +1,43 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.LogoWordmark__logo-wrapper {
+  align-items: center;
+  width: 143px;
+  height: 16px;
+  display: flex;
+  position: relative;
+}
+@media (max-width: 870px) {
+  .LogoWordmark__logo-wrapper {
+    width: 214px;
+    height: 24px;
+  }
+}
+.LogoWordmark__logo-static {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.LogoWordmark__logo-lottie {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LogoWordmark__logo-lottie svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+:is(
+  [data-theme="slate"] .LogoWordmark__logo-wrapper,
+  body:has([data-hero-nav="over"]) header .LogoWordmark__logo-wrapper
+) {
+  filter: invert();
+}
+@media (scripting: enabled) {
+  body:has([data-hero-nav="away"]) header .LogoWordmark__logo-wrapper {
+    filter: invert();
+  }
+}
+

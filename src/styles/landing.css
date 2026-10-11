@@ -1,0 +1,143 @@
+/* 入口页（/）的样式。
+   只引入字体与字体族变量，不引入 foundation-2.css 的全局正文规则，
+   避免把文章页的排版带进入口页。 */
+
+@import "./foundation-1.css";
+@import "./anthropicsans_dce02d96-module.css";
+@import "./anthropicserif_e7e46c4-module.css";
+@import "./anthropicmono_fae19af3-module.css";
+
+:root {
+  --landing-paper: #faf9f5;
+  --landing-ink: #141413;
+  --landing-ink-2: #5e5d59;
+  --landing-ink-3: #87867f;
+  --landing-line: #dedcd1;
+  --landing-clay: #d97757;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 40px 24px;
+  background: var(--landing-paper);
+  color: var(--landing-ink);
+  font-family: var(--anthropic-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.landing {
+  width: min(720px, 100%);
+}
+
+.landing__eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--landing-ink-3);
+}
+
+.landing__title {
+  margin: 0 0 12px;
+  font-family: var(--anthropic-serif), serif;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.landing__lede {
+  margin: 0 0 40px;
+  max-width: 46ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--landing-ink-2);
+}
+
+.landing__lede code {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 13px;
+  padding: 1px 5px;
+  border: 1px solid var(--landing-line);
+  border-radius: 2px;
+  color: var(--landing-ink);
+}
+
+.landing__cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.landing__card {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid var(--landing-line);
+  border-radius: 3px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.landing__card:hover {
+  border-color: var(--landing-ink-3);
+  transform: translateY(-2px);
+}
+
+.landing__card:focus-visible {
+  outline: 2px solid var(--landing-ink-2);
+  outline-offset: 3px;
+}
+
+.landing__no {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  color: var(--landing-clay);
+}
+
+.landing__card-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.landing__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--landing-ink-2);
+}
+
+.landing__path {
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  color: var(--landing-ink-3);
+}
+
+.landing__foot {
+  margin-top: 40px;
+  font-family: var(--anthropic-mono), monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--landing-ink-3);
+}
+
+.landing__foot a {
+  color: var(--landing-ink-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__card {
+    transition: none;
+  }
+
+  .landing__card:hover {
+    transform: none;
+  }
+}

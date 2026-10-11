@@ -1,0 +1,136 @@
+/* 恢复自 /_next/static/chunks/319a_2ybnnldk.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionTaskBundle__section {
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  padding: 48px 0;
+  line-height: 1.5;
+  position: relative;
+}
+.SectionTaskBundle__scrolly {
+  position: relative;
+}
+.SectionTaskBundle__sticky {
+  justify-content: center;
+  place-items: start center;
+  height: 100vh;
+  padding-top: 48px;
+  display: grid;
+  position: sticky;
+  top: 0;
+  overflow: clip;
+}
+@media (max-width: 700px) {
+  .SectionTaskBundle__sticky {
+    padding-top: calc(var(--header-nav-height, 68px) + 4px);
+  }
+}
+.SectionTaskBundle__stage {
+  flex-direction: column;
+  grid-area: 1/1;
+  align-items: center;
+  display: flex;
+}
+.SectionTaskBundle__beats {
+  z-index: 2;
+  margin-top: -56vh;
+  position: relative;
+}
+.SectionTaskBundle__beatSlot {
+  min-height: 112vh;
+  padding: 0 var(--page-margins);
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.SectionTaskBundle__beatTail {
+  height: 80vh;
+}
+.SectionTaskBundle__card {
+  text-wrap: pretty;
+}
+@media (max-width: 700px) {
+  .SectionTaskBundle__card {
+    text-wrap: auto;
+  }
+}
+.SectionTaskBundle__card {
+  border: 1px solid var(--color-slate-350);
+  border-radius: var(--br-8);
+  background: var(--color-slate-100);
+  width: min(416px, 100%);
+  color: var(--foreground-primary);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .SectionTaskBundle__card {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionTaskBundle__card p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionTaskBundle__card {
+  padding: var(--sp-16);
+  box-shadow: 0 4px 24px #0000000d;
+}
+.SectionTaskBundle__card p {
+  margin: 0;
+}
+.SectionTaskBundle__card p + p,
+.SectionTaskBundle__card h2 + p,
+.SectionTaskBundle__card h3 + p {
+  margin-top: var(--sp-16);
+}
+@media (max-width: 700px) {
+  .SectionTaskBundle__card p + p,
+  .SectionTaskBundle__card h2 + p,
+  .SectionTaskBundle__card h3 + p {
+    margin-top: var(--sp-12);
+  }
+}
+.SectionTaskBundle__card h2,
+.SectionTaskBundle__card h3,
+.SectionTaskBundle__card .SectionTaskBundle__lead {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-weight: var(--weight-display-bold);
+  font-size: var(--body-2, 17px);
+  line-height: var(--leading-155);
+  margin: 0;
+}
+.SectionTaskBundle__card strong,
+.SectionTaskBundle__card b {
+  font-weight: inherit;
+}
+.SectionTaskBundle__card .SectionTaskBundle__footnote {
+  font-family: var(--anthropic-sans), sans-serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-13, 13px);
+  letter-spacing: 0.13px;
+  color: var(--foreground-tertiary);
+  line-height: 20px;
+}
+

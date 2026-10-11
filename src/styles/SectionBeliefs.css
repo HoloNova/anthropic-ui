@@ -1,0 +1,84 @@
+/* 恢复自 /_next/static/chunks/31wfp4sninedi.css；只去掉类名构建哈希，并改用本地字体。 */
+.SectionBeliefs__headBlock {
+  z-index: 1;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  justify-content: center;
+  padding: 48px 24px;
+  display: flex;
+  position: relative;
+}
+.SectionBeliefs__section {
+  z-index: 1;
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  padding: 48px 24px;
+  position: relative;
+}
+.SectionBeliefs__head {
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+}
+.SectionBeliefs__title {
+  margin: 0 0 var(--sp-24);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--type-28, 28px);
+  letter-spacing: 0;
+  line-height: 1.28571;
+  font-weight: var(--weight-display-regular);
+  text-align: center;
+  text-wrap: balance;
+}
+.SectionBeliefs__standfirst {
+  margin: 0;
+}
+.SectionBeliefs__standfirst + .SectionBeliefs__standfirst {
+  margin-top: var(--sp-16);
+}
+.SectionBeliefs__standfirst {
+  color: var(--foreground-primary);
+  font-family: var(--anthropic-serif), serif;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on,
+    "liga" on;
+  font-size: var(--body-2, 17px);
+  font-weight: var(--weight-text-regular);
+  line-height: var(--leading-155);
+  letter-spacing: 0;
+}
+@media (max-width: 700px) {
+  .SectionBeliefs__standfirst {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+.SectionBeliefs__standfirst p {
+  font-size: inherit;
+  margin-top: 0;
+}
+.SectionBeliefs__figure {
+  width: 100vw;
+  margin-left: 50%;
+  padding: 48px 0 64px;
+  position: relative;
+  overflow: clip;
+  transform: translate(-50%);
+}
+.SectionBeliefs__paper {
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+}
+.SectionBeliefs__figureInner {
+  z-index: 1;
+  padding-inline: max(var(--page-margins, 24px), (100% - 1092px)/2);
+  position: relative;
+}
+
