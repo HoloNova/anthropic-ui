@@ -2,6 +2,8 @@
 
 目标页面：<https://www.anthropic.com/institute/econ-scenarios>
 
+线上站点：**<https://ui.campuslink.vip>**（入口页 `/`、原页面 `/origin`、渲染引擎拆解 `/component`）
+
 **这是一个能直接读、直接改、直接跑的 React 工程。** 页面文章、图表、问卷与经济模型都在 `src/` 里以可编辑的 JSX / CSS 形式存在。
 
 不是官方仓库。官方仓库里的 TS/SCSS 源码、类型定义和开发注释没有公开，这份代码是从该页面实际发布的 JS/CSS 里恢复出来的组件、模型和绘制逻辑；恢复过程不改变公式、数值、文案和数据结构，只把打包器外壳换成标准 ES 模块，并补上中文注释与可读命名。
@@ -37,11 +39,13 @@ npm run lab:check # 确认 public/component.md 没落后于卡片与源码，并
 npm run lab:md    # 重新生成 public/component.md（npm run build 也会先生成一次）
 npm run build     # 生成 dist/（构建产物，可随时删除）
 npm run preview   # 需要检查构建结果时手动启动
+npm run deploy:vps # 构建并部署到 ui.campuslink.vip，最后做公网自检
 ```
 
 页面本身不访问官网接口：字体已本地化，问卷答案只写进本机 `localStorage`。文章里的外部链接（论文、官网其他页面）仍指向原站。
 
-部署到公网的路径、子路径构建与响应头配置见 [`docs/DEPLOY.md`](docs/DEPLOY.md)。
+部署到公网的路径、子路径构建、响应头配置与 VPS 部署见 [`docs/DEPLOY.md`](docs/DEPLOY.md)
+和 [`deploy/nginx/README.md`](deploy/nginx/README.md)。
 
 ## 渲染引擎拆解（/component）
 
@@ -87,7 +91,8 @@ public/assets/fonts/       3 个字体族共 6 个字体文件
 public/component.md        拆解页文本版（构建时生成，不手写）
 public/_headers            Netlify / Cloudflare Pages 的响应头规则
 public/favicon.svg         站点图标
-scripts/                   校验与生成脚本（见下）
+deploy/nginx/              线上 nginx 配置副本与部署笔记
+scripts/                   校验、生成与部署脚本（见下）
 docs/                      部署、来源、验收清单、阅读指南与命名对照
 ```
 

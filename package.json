@@ -13,7 +13,8 @@
     "verify": "node scripts/verify.mjs",
     "lab:smoke": "node scripts/lab-smoke.mjs",
     "lab:md": "node scripts/build-lab-md.mjs",
-    "lab:check": "node scripts/build-lab-md.mjs --check && node scripts/lab-data-check.mjs"
+    "lab:check": "node scripts/build-lab-md.mjs --check && node scripts/lab-data-check.mjs",
+    "deploy:vps": "node scripts/deploy-vps.mjs"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.20",

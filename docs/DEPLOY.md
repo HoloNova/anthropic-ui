@@ -1,5 +1,19 @@
 # 部署说明
 
+线上地址：**https://ui.campuslink.vip**（Ubuntu + nginx 容器 + certbot，详见 [`deploy/nginx/README.md`](../deploy/nginx/README.md)）。
+
+日常更新：
+
+```sh
+npm run deploy:vps      # 构建 → 打包上传 → rsync 同步 → 公网自检
+```
+
+脚本会先 `npm run build`，再把 `dist/` 传到服务器并同步进 `/var/www/ui.campuslink.vip`，
+最后用 fetch 检查 `/`、`/origin/`、`/component/`、`/component.md`、`/nope` 的状态码与类型。
+服务器上的 nginx 配置副本在 `deploy/nginx/ui.campuslink.vip.conf`。
+
+---
+
 三个入口都是静态 HTML，没有服务端渲染、没有运行时接口调用，构建产物可以直接放到任意静态托管。
 
 | 路径 | 内容 | 构建入口 | 源码 |
@@ -48,6 +62,10 @@ BASE=/study/ npm run build
 Vite 的开发服务器与 `npm run preview` 由 `vite.config.js` 里的中间件补上 `charset=utf-8`。线上需要自己配置：
 
 - **Netlify / Cloudflare Pages**：仓库里的 `public/_headers` 会被复制到 `dist/_headers`，无需额外操作。
+- **nginx（当前线上）**：见 `deploy/nginx/ui.campuslink.vip.conf` 里的 `/component.md` 段：
+  先用 `default_type text/markdown` 给出类型，再用 `charset_types text/markdown` + `charset utf-8`
+  追加编码。不要写成 `default_type "text/markdown; charset=utf-8"` —— 那样类型匹配带上参数，
+  `gzip_types` 就不生效了（实测 markdown 从 69KB 变 24KB）。
 - **Vercel**：在 `vercel.json` 里写同样的规则：
 
   ```json
@@ -84,11 +102,12 @@ Vite 的开发服务器与 `npm run preview` 由 `vite.config.js` 里的中间�
 ## 部署前检查
 
 ```sh
-npm run verify      # 原页面：模块初始化、类名覆盖、CSS 变量、字体资源
+npm run verify      # 原页面：模块初始化、类名覆盖、CSS 变量、字体资源、入口一致性
 npm run lab:smoke   # 拆解页：SSR 渲染一遍，捕获 demo 运行时错误
 npm run lab:check   # component.md 是否落后于卡片与源码
 npm run build       # 生成 dist/
 npm run preview     # 本地检查构建结果：/、/origin/、/component/、/component.md
+npm run deploy:vps  # 部署到 ui.campuslink.vip 并做公网自检
 ```
 
 页面本身不访问官网接口：字体已本地化，问卷答案只写进访问者的 `localStorage`。

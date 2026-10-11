@@ -130,3 +130,15 @@ Logo 使用静态 wordmark，官网的 Lottie 动画未接入。没有 Cookie �
 - [ ] 打开 `/component.md` 检查结构：9 个 `##` 章节、30 个 `###` 卡片、31 段代码块成对闭合，末尾列出 18 个源文件。
 - [ ] 抽查 2–3 段代码：行号范围与页面折叠块一致，内容与 `src/` 里的真实文件一致。
 - [ ] 修改任一卡片的说明或源码行范围后运行 `npm run lab:check`，应当报出 component.md 不一致；`npm run lab:md` 后恢复通过。
+
+## 线上站点（https://ui.campuslink.vip）
+
+- [ ] `/` 显示入口页，两张卡片分别跳到 `/origin/` 与 `/component/`，字体不是系统兜底字体。
+- [ ] `/origin` 与 `/component`（不带斜杠）会 301 到带斜杠的形式。
+- [ ] `/component/` 的侧栏、元素地图、demo、参数旋钮、术语悬停与本地一致；窄屏目录可用。
+- [ ] `/component.md` 直接在浏览器打开是**中文不乱码**的 markdown，而不是下载文件。
+- [ ] `/nope` 返回 404（不是入口页）。
+- [ ] 地址栏是 HTTPS，证书有效（无警告）；http 会跳到 https。
+- [ ] 浏览器网络面板里 JS/CSS 走 gzip，`/assets/` 带 `cache-control: immutable`。
+- [ ] 其它站点未受影响：campuslink.vip、qr.campuslink.vip、join.campuslink.vip 仍正常。
+- [ ] 改一处文案后跑 `npm run deploy:vps`，线上内容随之更新，自检全 PASS。
